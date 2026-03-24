@@ -1,0 +1,3474 @@
+{
+  "problems": [
+    {
+      "id": 1,
+      "leetcode_id": 1,
+      "title": "两数之和",
+      "title_en": "Two Sum",
+      "difficulty": "Easy",
+      "tags": ["数组", "哈希表"],
+      "url": "https://leetcode.cn/problems/two-sum/",
+      "category": "哈希",
+      "codetop_frequency": 350,
+      "description": "给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出和为目标值 target 的那两个整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案，并且你不能使用两次相同的元素。你可以按任意顺序返回答案。",
+      "examples": [
+        {
+          "input": "nums = [2,7,11,15], target = 9",
+          "output": "[0,1]",
+          "explanation": "因为 nums[0] + nums[1] == 9 ，返回 [0, 1]"
+        },
+        {
+          "input": "nums = [3,2,4], target = 6",
+          "output": "[1,2]",
+          "explanation": "因为 nums[1] + nums[2] == 6 ，返回 [1, 2]"
+        }
+      ],
+      "constraints": [
+        "2 <= nums.length <= 10^4",
+        "-10^9 <= nums[i] <= 10^9",
+        "-10^9 <= target <= 10^9",
+        "只会存在一个有效答案"
+      ],
+      "function_signature": "def twoSum(self, nums: List[int], target: int) -> List[int]:",
+      "test_cases": [
+        {"input": {"nums": [2, 7, 11, 15], "target": 9}, "expected": [0, 1]},
+        {"input": {"nums": [3, 2, 4], "target": 6}, "expected": [1, 2]},
+        {"input": {"nums": [3, 3], "target": 6}, "expected": [0, 1]}
+      ]
+    },
+    {
+      "id": 2,
+      "leetcode_id": 49,
+      "title": "字母异位词分组",
+      "title_en": "Group Anagrams",
+      "difficulty": "Medium",
+      "tags": ["数组", "哈希表", "字符串", "排序"],
+      "url": "https://leetcode.cn/problems/group-anagrams/",
+      "category": "哈希",
+      "codetop_frequency": 120,
+      "description": "给你一个字符串数组，请你将字母异位词组合在一起。可以按任意顺序返回结果列表。字母异位词是由重新排列源单词的所有字母得到的一个新单词。",
+      "examples": [
+        {
+          "input": "strs = [\"eat\",\"tea\",\"tan\",\"ate\",\"nat\",\"bat\"]",
+          "output": "[[\"bat\"],[\"nat\",\"tan\"],[\"ate\",\"eat\",\"tea\"]]",
+          "explanation": "将字母异位词分组在一起"
+        },
+        {
+          "input": "strs = [\"\"]",
+          "output": "[[\"\"]]",
+          "explanation": "空字符串单独为一组"
+        }
+      ],
+      "constraints": [
+        "1 <= strs.length <= 10^4",
+        "0 <= strs[i].length <= 100",
+        "strs[i] 仅包含小写字母"
+      ],
+      "function_signature": "def groupAnagrams(self, strs: List[str]) -> List[List[str]]:",
+      "test_cases": [
+        {"input": {"strs": ["eat", "tea", "tan", "ate", "nat", "bat"]}, "expected": [["bat"], ["nat", "tan"], ["ate", "eat", "tea"]]},
+        {"input": {"strs": [""]}, "expected": [[""]]},
+        {"input": {"strs": ["a"]}, "expected": [["a"]]}
+      ]
+    },
+    {
+      "id": 3,
+      "leetcode_id": 128,
+      "title": "最长连续序列",
+      "title_en": "Longest Consecutive Sequence",
+      "difficulty": "Medium",
+      "tags": ["并查集", "数组", "哈希表"],
+      "url": "https://leetcode.cn/problems/longest-consecutive-sequence/",
+      "category": "哈希",
+      "codetop_frequency": 95,
+      "description": "给定一个未排序的整数数组 nums，找出数字连续的最长序列（不要求序列元素在原数组中连续）的长度。请你设计并实现时间复杂度为 O(n) 的算法解决此问题。",
+      "examples": [
+        {
+          "input": "nums = [100,4,200,1,3,2]",
+          "output": "4",
+          "explanation": "最长数字连续序列是 [1, 2, 3, 4]。它的长度为 4。"
+        },
+        {
+          "input": "nums = [0,3,7,2,5,8,4,6,0,1]",
+          "output": "9",
+          "explanation": "最长数字连续序列是 [0, 1, 2, 3, 4, 5, 6, 7, 8]。它的长度为 9。"
+        }
+      ],
+      "constraints": [
+        "0 <= nums.length <= 10^5",
+        "-10^9 <= nums[i] <= 10^9"
+      ],
+      "function_signature": "def longestConsecutive(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [100, 4, 200, 1, 3, 2]}, "expected": 4},
+        {"input": {"nums": [0, 3, 7, 2, 5, 8, 4, 6, 0, 1]}, "expected": 9},
+        {"input": {"nums": []}, "expected": 0}
+      ]
+    },
+    {
+      "id": 4,
+      "leetcode_id": 283,
+      "title": "移动零",
+      "title_en": "Move Zeroes",
+      "difficulty": "Easy",
+      "tags": ["数组", "双指针"],
+      "url": "https://leetcode.cn/problems/move-zeroes/",
+      "category": "双指针",
+      "codetop_frequency": 85,
+      "description": "给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。请注意，必须在不复制数组的情况下原地对数组进行操作。",
+      "examples": [
+        {
+          "input": "nums = [0,1,0,3,12]",
+          "output": "[1,3,12,0,0]",
+          "explanation": "将所有0移到末尾，保持非零元素相对顺序"
+        },
+        {
+          "input": "nums = [0]",
+          "output": "[0]",
+          "explanation": "只有一个元素且为0，无需移动"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^4",
+        "-2^31 <= nums[i] <= 2^31 - 1"
+      ],
+      "function_signature": "def moveZeroes(self, nums: List[int]) -> None:",
+      "test_cases": [
+        {"input": {"nums": [0, 1, 0, 3, 12]}, "expected": [1, 3, 12, 0, 0]},
+        {"input": {"nums": [0]}, "expected": [0]},
+        {"input": {"nums": [1, 0, 0, 2]}, "expected": [1, 2, 0, 0]}
+      ]
+    },
+    {
+      "id": 5,
+      "leetcode_id": 11,
+      "title": "盛最多水的容器",
+      "title_en": "Container With Most Water",
+      "difficulty": "Medium",
+      "tags": ["贪心", "数组", "双指针"],
+      "url": "https://leetcode.cn/problems/container-with-most-water/",
+      "category": "双指针",
+      "codetop_frequency": 130,
+      "description": "给定一个长度为 n 的整数数组 height。有 n 条垂线，第 i 条线的两个端点是 (i, 0) 和 (i, height[i])。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。返回容器可以储存的最大水量。",
+      "examples": [
+        {
+          "input": "height = [1,8,6,2,5,4,8,3,7]",
+          "output": "49",
+          "explanation": "选择第2条线和第9条线，容器面积最大为49"
+        },
+        {
+          "input": "height = [1,1]",
+          "output": "1",
+          "explanation": "只有两条线，面积为1"
+        }
+      ],
+      "constraints": [
+        "n == height.length",
+        "2 <= n <= 10^5",
+        "0 <= height[i] <= 10^4"
+      ],
+      "function_signature": "def maxArea(self, height: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"height": [1, 8, 6, 2, 5, 4, 8, 3, 7]}, "expected": 49},
+        {"input": {"height": [1, 1]}, "expected": 1},
+        {"input": {"height": [4, 3, 2, 1, 4]}, "expected": 16}
+      ]
+    },
+    {
+      "id": 6,
+      "leetcode_id": 15,
+      "title": "三数之和",
+      "title_en": "3Sum",
+      "difficulty": "Medium",
+      "tags": ["数组", "双指针", "排序"],
+      "url": "https://leetcode.cn/problems/3sum/",
+      "category": "双指针",
+      "codetop_frequency": 280,
+      "description": "给你一个整数数组 nums，判断是否存在三元组 [nums[i], nums[j], nums[k]] 满足 i != j、i != k 且 j != k，同时还满足 nums[i] + nums[j] + nums[k] == 0。请你返回所有和为 0 且不重复的三元组。答案中不可以包含重复的三元组。",
+      "examples": [
+        {
+          "input": "nums = [-1,0,1,2,-1,-4]",
+          "output": "[[-1,-1,2],[-1,0,1]]",
+          "explanation": "满足条件的三元组有 [-1,-1,2] 和 [-1,0,1]"
+        },
+        {
+          "input": "nums = [0,1,1]",
+          "output": "[]",
+          "explanation": "不存在和为0的三元组"
+        }
+      ],
+      "constraints": [
+        "3 <= nums.length <= 3000",
+        "-10^5 <= nums[i] <= 10^5"
+      ],
+      "function_signature": "def threeSum(self, nums: List[int]) -> List[List[int]]:",
+      "test_cases": [
+        {"input": {"nums": [-1, 0, 1, 2, -1, -4]}, "expected": [[-1, -1, 2], [-1, 0, 1]]},
+        {"input": {"nums": [0, 1, 1]}, "expected": []},
+        {"input": {"nums": [0, 0, 0]}, "expected": [[0, 0, 0]]}
+      ]
+    },
+    {
+      "id": 7,
+      "leetcode_id": 42,
+      "title": "接雨水",
+      "title_en": "Trapping Rain Water",
+      "difficulty": "Hard",
+      "tags": ["栈", "数组", "双指针", "动态规划", "单调栈"],
+      "url": "https://leetcode.cn/problems/trapping-rain-water/",
+      "category": "双指针",
+      "codetop_frequency": 250,
+      "description": "给定 n 个非负整数表示每个宽度为 1 的柱子的高度图，计算按此排列的柱子，下雨之后能接多少雨水。",
+      "examples": [
+        {
+          "input": "height = [0,1,0,2,1,0,1,3,2,1,2,1]",
+          "output": "6",
+          "explanation": "上面是由数组 [0,1,0,2,1,0,1,3,2,1,2,1] 表示的高度图，在这种情况下，可以接 6 个单位的雨水"
+        },
+        {
+          "input": "height = [4,2,0,3,2,5]",
+          "output": "9",
+          "explanation": "可以接 9 个单位的雨水"
+        }
+      ],
+      "constraints": [
+        "n == height.length",
+        "1 <= n <= 2 * 10^4",
+        "0 <= height[i] <= 10^5"
+      ],
+      "function_signature": "def trap(self, height: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"height": [0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]}, "expected": 6},
+        {"input": {"height": [4, 2, 0, 3, 2, 5]}, "expected": 9},
+        {"input": {"height": [1, 0, 1]}, "expected": 1}
+      ]
+    },
+    {
+      "id": 8,
+      "leetcode_id": 3,
+      "title": "无重复字符的最长子串",
+      "title_en": "Longest Substring Without Repeating Characters",
+      "difficulty": "Medium",
+      "tags": ["哈希表", "字符串", "滑动窗口"],
+      "url": "https://leetcode.cn/problems/longest-substring-without-repeating-characters/",
+      "category": "滑动窗口",
+      "codetop_frequency": 320,
+      "description": "给定一个字符串 s，请你找出其中不含有重复字符的最长子串的长度。",
+      "examples": [
+        {
+          "input": "s = \"abcabcbb\"",
+          "output": "3",
+          "explanation": "因为无重复字符的最长子串是 \"abc\"，所以其长度为 3"
+        },
+        {
+          "input": "s = \"bbbbb\"",
+          "output": "1",
+          "explanation": "因为无重复字符的最长子串是 \"b\"，所以其长度为 1"
+        }
+      ],
+      "constraints": [
+        "0 <= s.length <= 5 * 10^4",
+        "s 由英文字母、数字、符号和空格组成"
+      ],
+      "function_signature": "def lengthOfLongestSubstring(self, s: str) -> int:",
+      "test_cases": [
+        {"input": {"s": "abcabcbb"}, "expected": 3},
+        {"input": {"s": "bbbbb"}, "expected": 1},
+        {"input": {"s": "pwwkew"}, "expected": 3}
+      ]
+    },
+    {
+      "id": 9,
+      "leetcode_id": 438,
+      "title": "找到字符串中所有字母异位词",
+      "title_en": "Find All Anagrams in a String",
+      "difficulty": "Medium",
+      "tags": ["哈希表", "字符串", "滑动窗口"],
+      "url": "https://leetcode.cn/problems/find-all-anagrams-in-a-string/",
+      "category": "滑动窗口",
+      "codetop_frequency": 65,
+      "description": "给定两个字符串 s 和 p，找到 s 中所有 p 的异位词的子串，返回这些子串的起始索引。不考虑答案输出的顺序。异位词指由相同字母重排列形成的字符串（包括相同的字符串）。",
+      "examples": [
+        {
+          "input": "s = \"cbaebabacd\", p = \"abc\"",
+          "output": "[0,6]",
+          "explanation": "起始索引等于 0 的子串是 \"cba\", 它是 \"abc\" 的异位词。起始索引等于 6 的子串是 \"bac\", 它是 \"abc\" 的异位词。"
+        },
+        {
+          "input": "s = \"abab\", p = \"ab\"",
+          "output": "[0,1,2]",
+          "explanation": "起始索引等于 0, 1, 2 的子串分别是 \"ab\", \"ba\", \"ab\"，都是 \"ab\" 的异位词。"
+        }
+      ],
+      "constraints": [
+        "1 <= s.length, p.length <= 3 * 10^4",
+        "s 和 p 仅包含小写字母"
+      ],
+      "function_signature": "def findAnagrams(self, s: str, p: str) -> List[int]:",
+      "test_cases": [
+        {"input": {"s": "cbaebabacd", "p": "abc"}, "expected": [0, 6]},
+        {"input": {"s": "abab", "p": "ab"}, "expected": [0, 1, 2]},
+        {"input": {"s": "a", "p": "ab"}, "expected": []}
+      ]
+    },
+    {
+      "id": 10,
+      "leetcode_id": 560,
+      "title": "和为K的子数组",
+      "title_en": "Subarray Sum Equals K",
+      "difficulty": "Medium",
+      "tags": ["数组", "哈希表", "前缀和"],
+      "url": "https://leetcode.cn/problems/subarray-sum-equals-k/",
+      "category": "子串",
+      "codetop_frequency": 110,
+      "description": "给你一个整数数组 nums 和一个整数 k，请你统计并返回该数组中和为 k 的连续子数组的个数。子数组是数组中元素的连续非空序列。",
+      "examples": [
+        {
+          "input": "nums = [1,1,1], k = 2",
+          "output": "2",
+          "explanation": "连续子数组 [1,1] 出现了2次，和为2"
+        },
+        {
+          "input": "nums = [1,2,3], k = 3",
+          "output": "2",
+          "explanation": "子数组 [1,2] 和 [3] 的和都为3"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 2 * 10^4",
+        "-1000 <= nums[i] <= 1000",
+        "-10^7 <= k <= 10^7"
+      ],
+      "function_signature": "def subarraySum(self, nums: List[int], k: int) -> int:",
+      "test_cases": [
+        {"input": {"nums": [1, 1, 1], "k": 2}, "expected": 2},
+        {"input": {"nums": [1, 2, 3], "k": 3}, "expected": 2},
+        {"input": {"nums": [1], "k": 0}, "expected": 0}
+      ]
+    },
+    {
+      "id": 11,
+      "leetcode_id": 239,
+      "title": "滑动窗口最大值",
+      "title_en": "Sliding Window Maximum",
+      "difficulty": "Hard",
+      "tags": ["队列", "数组", "滑动窗口", "单调队列", "堆"],
+      "url": "https://leetcode.cn/problems/sliding-window-maximum/",
+      "category": "子串",
+      "codetop_frequency": 145,
+      "description": "给你一个整数数组 nums，有一个大小为 k 的滑动窗口从数组的最左侧移动到数组的最右侧。你只可以看到在滑动窗口内的 k 个数字。滑动窗口每次只向右移动一位。返回滑动窗口中的最大值。",
+      "examples": [
+        {
+          "input": "nums = [1,3,-1,-3,5,3,6,7], k = 3",
+          "output": "[3,3,5,5,6,7]",
+          "explanation": "滑动窗口依次为 [1,3,-1],[3,-1,-3],[-1,-3,5],[-3,5,3],[5,3,6],[3,6,7]，最大值分别为 3,3,5,5,6,7"
+        },
+        {
+          "input": "nums = [1], k = 1",
+          "output": "[1]",
+          "explanation": "只有一个元素，最大值为1"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^5",
+        "-10^4 <= nums[i] <= 10^4",
+        "1 <= k <= nums.length"
+      ],
+      "function_signature": "def maxSlidingWindow(self, nums: List[int], k: int) -> List[int]:",
+      "test_cases": [
+        {"input": {"nums": [1, 3, -1, -3, 5, 3, 6, 7], "k": 3}, "expected": [3, 3, 5, 5, 6, 7]},
+        {"input": {"nums": [1], "k": 1}, "expected": [1]},
+        {"input": {"nums": [9, 11], "k": 2}, "expected": [11]}
+      ]
+    },
+    {
+      "id": 12,
+      "leetcode_id": 76,
+      "title": "最小覆盖子串",
+      "title_en": "Minimum Window Substring",
+      "difficulty": "Hard",
+      "tags": ["哈希表", "字符串", "滑动窗口"],
+      "url": "https://leetcode.cn/problems/minimum-window-substring/",
+      "category": "子串",
+      "codetop_frequency": 160,
+      "description": "给你一个字符串 s、一个字符串 t。返回 s 中涵盖 t 所有字符的最小子串。如果 s 中不存在涵盖 t 所有字符的子串，则返回空字符串。t 中的字符可能重复，结果子串中也必须包含相应数量的字符。",
+      "examples": [
+        {
+          "input": "s = \"ADOBECODEBANC\", t = \"ABC\"",
+          "output": "\"BANC\"",
+          "explanation": "最小覆盖子串为 \"BANC\""
+        },
+        {
+          "input": "s = \"a\", t = \"a\"",
+          "output": "\"a\"",
+          "explanation": "整个字符串 s 即为最小覆盖子串"
+        }
+      ],
+      "constraints": [
+        "m == s.length",
+        "n == t.length",
+        "1 <= m, n <= 10^5",
+        "s 和 t 由英文字母组成"
+      ],
+      "function_signature": "def minWindow(self, s: str, t: str) -> str:",
+      "test_cases": [
+        {"input": {"s": "ADOBECODEBANC", "t": "ABC"}, "expected": "BANC"},
+        {"input": {"s": "a", "t": "a"}, "expected": "a"},
+        {"input": {"s": "a", "t": "aa"}, "expected": ""}
+      ]
+    },
+    {
+      "id": 13,
+      "leetcode_id": 53,
+      "title": "最大子数组和",
+      "title_en": "Maximum Subarray",
+      "difficulty": "Medium",
+      "tags": ["数组", "分治", "动态规划"],
+      "url": "https://leetcode.cn/problems/maximum-subarray/",
+      "category": "普通数组",
+      "codetop_frequency": 200,
+      "description": "给你一个整数数组 nums，请你找出一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。子数组是数组中的一个连续部分。",
+      "examples": [
+        {
+          "input": "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+          "output": "6",
+          "explanation": "连续子数组 [4,-1,2,1] 的和最大，为 6"
+        },
+        {
+          "input": "nums = [1]",
+          "output": "1",
+          "explanation": "只有一个元素，最大和为1"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^5",
+        "-10^4 <= nums[i] <= 10^4"
+      ],
+      "function_signature": "def maxSubArray(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [-2, 1, -3, 4, -1, 2, 1, -5, 4]}, "expected": 6},
+        {"input": {"nums": [1]}, "expected": 1},
+        {"input": {"nums": [5, 4, -1, 7, 8]}, "expected": 23}
+      ]
+    },
+    {
+      "id": 14,
+      "leetcode_id": 56,
+      "title": "合并区间",
+      "title_en": "Merge Intervals",
+      "difficulty": "Medium",
+      "tags": ["数组", "排序"],
+      "url": "https://leetcode.cn/problems/merge-intervals/",
+      "category": "普通数组",
+      "codetop_frequency": 210,
+      "description": "以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [starti, endi]。请你合并所有重叠的区间，并返回一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间。",
+      "examples": [
+        {
+          "input": "intervals = [[1,3],[2,6],[8,10],[15,18]]",
+          "output": "[[1,6],[8,10],[15,18]]",
+          "explanation": "区间 [1,3] 和 [2,6] 重叠, 将它们合并为 [1,6]"
+        },
+        {
+          "input": "intervals = [[1,4],[4,5]]",
+          "output": "[[1,5]]",
+          "explanation": "区间 [1,4] 和 [4,5] 可被视为重叠区间"
+        }
+      ],
+      "constraints": [
+        "1 <= intervals.length <= 10^4",
+        "intervals[i].length == 2",
+        "0 <= starti <= endi <= 10^4"
+      ],
+      "function_signature": "def merge(self, intervals: List[List[int]]) -> List[List[int]]:",
+      "test_cases": [
+        {"input": {"intervals": [[1, 3], [2, 6], [8, 10], [15, 18]]}, "expected": [[1, 6], [8, 10], [15, 18]]},
+        {"input": {"intervals": [[1, 4], [4, 5]]}, "expected": [[1, 5]]},
+        {"input": {"intervals": [[1, 4], [0, 4]]}, "expected": [[0, 4]]}
+      ]
+    },
+    {
+      "id": 15,
+      "leetcode_id": 189,
+      "title": "轮转数组",
+      "title_en": "Rotate Array",
+      "difficulty": "Medium",
+      "tags": ["数组", "数学", "双指针"],
+      "url": "https://leetcode.cn/problems/rotate-array/",
+      "category": "普通数组",
+      "codetop_frequency": 75,
+      "description": "给定一个整数数组 nums，将数组中的元素向右轮转 k 个位置，其中 k 是非负数。尽可能想出更多的解决方案，至少有三种不同的方法可以解决这个问题。你可以使用空间复杂度为 O(1) 的原地算法解决这个问题吗？",
+      "examples": [
+        {
+          "input": "nums = [1,2,3,4,5,6,7], k = 3",
+          "output": "[5,6,7,1,2,3,4]",
+          "explanation": "向右轮转 1 步: [7,1,2,3,4,5,6]，向右轮转 2 步: [6,7,1,2,3,4,5]，向右轮转 3 步: [5,6,7,1,2,3,4]"
+        },
+        {
+          "input": "nums = [-1,-100,3,99], k = 2",
+          "output": "[3,99,-1,-100]",
+          "explanation": "向右轮转 2 步: [3,99,-1,-100]"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^5",
+        "-2^31 <= nums[i] <= 2^31 - 1",
+        "0 <= k <= 10^5"
+      ],
+      "function_signature": "def rotate(self, nums: List[int], k: int) -> None:",
+      "test_cases": [
+        {"input": {"nums": [1, 2, 3, 4, 5, 6, 7], "k": 3}, "expected": [5, 6, 7, 1, 2, 3, 4]},
+        {"input": {"nums": [-1, -100, 3, 99], "k": 2}, "expected": [3, 99, -1, -100]},
+        {"input": {"nums": [1, 2], "k": 3}, "expected": [2, 1]}
+      ]
+    },
+    {
+      "id": 16,
+      "leetcode_id": 238,
+      "title": "除自身以外数组的乘积",
+      "title_en": "Product of Array Except Self",
+      "difficulty": "Medium",
+      "tags": ["数组", "前缀和"],
+      "url": "https://leetcode.cn/problems/product-of-array-except-self/",
+      "category": "普通数组",
+      "codetop_frequency": 105,
+      "description": "给你一个整数数组 nums，返回数组 answer，其中 answer[i] 等于 nums 中除 nums[i] 之外其余各元素的乘积。题目数据保证数组 nums 之中任意元素的全部前缀元素和后缀的乘积都在 32 位整数范围内。请不要使用除法，且在 O(n) 时间复杂度内完成此题。",
+      "examples": [
+        {
+          "input": "nums = [1,2,3,4]",
+          "output": "[24,12,8,6]",
+          "explanation": "answer[0] = 2*3*4 = 24, answer[1] = 1*3*4 = 12, answer[2] = 1*2*4 = 8, answer[3] = 1*2*3 = 6"
+        },
+        {
+          "input": "nums = [-1,1,0,-3,3]",
+          "output": "[0,0,9,0,0]",
+          "explanation": "包含0的数组，除了0所在位置外其他位置乘积都为0"
+        }
+      ],
+      "constraints": [
+        "2 <= nums.length <= 10^5",
+        "-30 <= nums[i] <= 30",
+        "保证数组 nums 之中任意元素的全部前缀元素和后缀的乘积都在 32 位整数范围内"
+      ],
+      "function_signature": "def productExceptSelf(self, nums: List[int]) -> List[int]:",
+      "test_cases": [
+        {"input": {"nums": [1, 2, 3, 4]}, "expected": [24, 12, 8, 6]},
+        {"input": {"nums": [-1, 1, 0, -3, 3]}, "expected": [0, 0, 9, 0, 0]},
+        {"input": {"nums": [2, 3]}, "expected": [3, 2]}
+      ]
+    },
+    {
+      "id": 17,
+      "leetcode_id": 41,
+      "title": "缺失的第一个正数",
+      "title_en": "First Missing Positive",
+      "difficulty": "Hard",
+      "tags": ["数组", "哈希表"],
+      "url": "https://leetcode.cn/problems/first-missing-positive/",
+      "category": "普通数组",
+      "codetop_frequency": 90,
+      "description": "给你一个未排序的整数数组 nums，请你找出其中没有出现的最小的正整数。请你实现时间复杂度为 O(n) 并且只使用常数级别额外空间的解决方案。",
+      "examples": [
+        {
+          "input": "nums = [1,2,0]",
+          "output": "3",
+          "explanation": "范围 [1,2] 中的数字都在数组中，所以答案是3"
+        },
+        {
+          "input": "nums = [3,4,-1,1]",
+          "output": "2",
+          "explanation": "1在数组中但2不在，所以答案是2"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 5 * 10^5",
+        "-2^31 <= nums[i] <= 2^31 - 1"
+      ],
+      "function_signature": "def firstMissingPositive(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [1, 2, 0]}, "expected": 3},
+        {"input": {"nums": [3, 4, -1, 1]}, "expected": 2},
+        {"input": {"nums": [7, 8, 9, 11, 12]}, "expected": 1}
+      ]
+    },
+    {
+      "id": 18,
+      "leetcode_id": 73,
+      "title": "矩阵置零",
+      "title_en": "Set Matrix Zeroes",
+      "difficulty": "Medium",
+      "tags": ["数组", "哈希表", "矩阵"],
+      "url": "https://leetcode.cn/problems/set-matrix-zeroes/",
+      "category": "矩阵",
+      "codetop_frequency": 70,
+      "description": "给定一个 m x n 的矩阵，如果一个元素为 0，则将其所在行和列的所有元素都设为 0。请使用原地算法。",
+      "examples": [
+        {
+          "input": "matrix = [[1,1,1],[1,0,1],[1,1,1]]",
+          "output": "[[1,0,1],[0,0,0],[1,0,1]]",
+          "explanation": "将包含0的行和列都置零"
+        },
+        {
+          "input": "matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]",
+          "output": "[[0,0,0,0],[0,4,5,0],[0,3,1,0]]",
+          "explanation": "第一行和第一列、第四列都被置零"
+        }
+      ],
+      "constraints": [
+        "m == matrix.length",
+        "n == matrix[0].length",
+        "1 <= m, n <= 200",
+        "-2^31 <= matrix[i][j] <= 2^31 - 1"
+      ],
+      "function_signature": "def setZeroes(self, matrix: List[List[int]]) -> None:",
+      "test_cases": [
+        {"input": {"matrix": [[1, 1, 1], [1, 0, 1], [1, 1, 1]]}, "expected": [[1, 0, 1], [0, 0, 0], [1, 0, 1]]},
+        {"input": {"matrix": [[0, 1, 2, 0], [3, 4, 5, 2], [1, 3, 1, 5]]}, "expected": [[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]},
+        {"input": {"matrix": [[1, 2], [3, 4]]}, "expected": [[1, 2], [3, 4]]}
+      ]
+    },
+    {
+      "id": 19,
+      "leetcode_id": 54,
+      "title": "螺旋矩阵",
+      "title_en": "Spiral Matrix",
+      "difficulty": "Medium",
+      "tags": ["数组", "矩阵", "模拟"],
+      "url": "https://leetcode.cn/problems/spiral-matrix/",
+      "category": "矩阵",
+      "codetop_frequency": 155,
+      "description": "给你一个 m 行 n 列的矩阵 matrix，请按照顺时针螺旋顺序，返回矩阵中的所有元素。",
+      "examples": [
+        {
+          "input": "matrix = [[1,2,3],[4,5,6],[7,8,9]]",
+          "output": "[1,2,3,6,9,8,7,4,5]",
+          "explanation": "按顺时针螺旋顺序遍历矩阵"
+        },
+        {
+          "input": "matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]",
+          "output": "[1,2,3,4,8,12,11,10,9,5,6,7]",
+          "explanation": "按顺时针螺旋顺序遍历矩阵"
+        }
+      ],
+      "constraints": [
+        "m == matrix.length",
+        "n == matrix[i].length",
+        "1 <= m, n <= 10",
+        "-100 <= matrix[i][j] <= 100"
+      ],
+      "function_signature": "def spiralOrder(self, matrix: List[List[int]]) -> List[int]:",
+      "test_cases": [
+        {"input": {"matrix": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}, "expected": [1, 2, 3, 6, 9, 8, 7, 4, 5]},
+        {"input": {"matrix": [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]}, "expected": [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]},
+        {"input": {"matrix": [[1]]}, "expected": [1]}
+      ]
+    },
+    {
+      "id": 20,
+      "leetcode_id": 48,
+      "title": "旋转图像",
+      "title_en": "Rotate Image",
+      "difficulty": "Medium",
+      "tags": ["数组", "数学", "矩阵"],
+      "url": "https://leetcode.cn/problems/rotate-image/",
+      "category": "矩阵",
+      "codetop_frequency": 100,
+      "description": "给定一个 n x n 的二维矩阵 matrix 表示一个图像。请你将图像顺时针旋转 90 度。你必须在原地旋转图像，这意味着你需要直接修改输入的二维矩阵。请不要使用另一个矩阵来旋转图像。",
+      "examples": [
+        {
+          "input": "matrix = [[1,2,3],[4,5,6],[7,8,9]]",
+          "output": "[[7,4,1],[8,5,2],[9,6,3]]",
+          "explanation": "顺时针旋转90度后的结果"
+        },
+        {
+          "input": "matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]",
+          "output": "[[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]",
+          "explanation": "顺时针旋转90度后的结果"
+        }
+      ],
+      "constraints": [
+        "n == matrix.length == matrix[i].length",
+        "1 <= n <= 20",
+        "-1000 <= matrix[i][j] <= 1000"
+      ],
+      "function_signature": "def rotate(self, matrix: List[List[int]]) -> None:",
+      "test_cases": [
+        {"input": {"matrix": [[1, 2, 3], [4, 5, 6], [7, 8, 9]]}, "expected": [[7, 4, 1], [8, 5, 2], [9, 6, 3]]},
+        {"input": {"matrix": [[5, 1, 9, 11], [2, 4, 8, 10], [13, 3, 6, 7], [15, 14, 12, 16]]}, "expected": [[15, 13, 2, 5], [14, 3, 4, 1], [12, 6, 8, 9], [16, 7, 10, 11]]},
+        {"input": {"matrix": [[1]]}, "expected": [[1]]}
+      ]
+    },
+    {
+      "id": 21,
+      "leetcode_id": 240,
+      "title": "搜索二维矩阵 II",
+      "title_en": "Search a 2D Matrix II",
+      "difficulty": "Medium",
+      "tags": ["数组", "二分查找", "分治", "矩阵"],
+      "url": "https://leetcode.cn/problems/search-a-2d-matrix-ii/",
+      "category": "矩阵",
+      "codetop_frequency": 80,
+      "description": "编写一个高效的算法来搜索 m x n 矩阵 matrix 中的一个目标值 target。该矩阵具有以下特性：每行的元素从左到右升序排列，每列的元素从上到下升序排列。",
+      "examples": [
+        {
+          "input": "matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5",
+          "output": "true",
+          "explanation": "矩阵中存在目标值5"
+        },
+        {
+          "input": "matrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 20",
+          "output": "false",
+          "explanation": "矩阵中不存在目标值20"
+        }
+      ],
+      "constraints": [
+        "m == matrix.length",
+        "n == matrix[i].length",
+        "1 <= n, m <= 300",
+        "-10^9 <= matrix[i][j] <= 10^9",
+        "-10^9 <= target <= 10^9"
+      ],
+      "function_signature": "def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:",
+      "test_cases": [
+        {"input": {"matrix": [[1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30]], "target": 5}, "expected": true},
+        {"input": {"matrix": [[1, 4, 7, 11, 15], [2, 5, 8, 12, 19], [3, 6, 9, 16, 22], [10, 13, 14, 17, 24], [18, 21, 23, 26, 30]], "target": 20}, "expected": false},
+        {"input": {"matrix": [[-5]], "target": -5}, "expected": true}
+      ]
+    },
+    {
+      "id": 22,
+      "leetcode_id": 160,
+      "title": "相交链表",
+      "title_en": "Intersection of Two Linked Lists",
+      "difficulty": "Easy",
+      "tags": ["哈希表", "链表", "双指针"],
+      "url": "https://leetcode.cn/problems/intersection-of-two-linked-lists/",
+      "category": "链表",
+      "codetop_frequency": 115,
+      "description": "给你两个单链表的头节点 headA 和 headB，请你找出并返回两个单链表相交的起始节点。如果两个链表不存在相交节点，返回 null。整个链式结构中不存在环。注意，函数返回结果后，链表必须保持其原始结构。",
+      "examples": [
+        {
+          "input": "intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3",
+          "output": "8",
+          "explanation": "相交节点的值为 8，从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,6,1,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。"
+        }
+      ],
+      "constraints": [
+        "listA 中节点数目为 m",
+        "listB 中节点数目为 n",
+        "1 <= m, n <= 3 * 10^4",
+        "1 <= Node.val <= 10^5"
+      ],
+      "function_signature": "def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"intersectVal": 8, "listA": [4, 1, 8, 4, 5], "listB": [5, 6, 1, 8, 4, 5], "skipA": 2, "skipB": 3}, "expected": 8},
+        {"input": {"intersectVal": 2, "listA": [1, 9, 1, 2, 4], "listB": [3, 2, 4], "skipA": 3, "skipB": 1}, "expected": 2},
+        {"input": {"intersectVal": 0, "listA": [2, 6, 4], "listB": [1, 5], "skipA": 3, "skipB": 2}, "expected": null}
+      ]
+    },
+    {
+      "id": 23,
+      "leetcode_id": 206,
+      "title": "反转链表",
+      "title_en": "Reverse Linked List",
+      "difficulty": "Easy",
+      "tags": ["递归", "链表"],
+      "url": "https://leetcode.cn/problems/reverse-linked-list/",
+      "category": "链表",
+      "codetop_frequency": 300,
+      "description": "给你单链表的头节点 head，请你反转链表，并返回反转后的链表。",
+      "examples": [
+        {
+          "input": "head = [1,2,3,4,5]",
+          "output": "[5,4,3,2,1]",
+          "explanation": "反转整个链表"
+        },
+        {
+          "input": "head = [1,2]",
+          "output": "[2,1]",
+          "explanation": "反转两个节点的链表"
+        }
+      ],
+      "constraints": [
+        "链表中节点的数目范围是 [0, 5000]",
+        "-5000 <= Node.val <= 5000"
+      ],
+      "function_signature": "def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"head": [1, 2, 3, 4, 5]}, "expected": [5, 4, 3, 2, 1]},
+        {"input": {"head": [1, 2]}, "expected": [2, 1]},
+        {"input": {"head": []}, "expected": []}
+      ]
+    },
+    {
+      "id": 24,
+      "leetcode_id": 234,
+      "title": "回文链表",
+      "title_en": "Palindrome Linked List",
+      "difficulty": "Easy",
+      "tags": ["栈", "递归", "链表", "双指针"],
+      "url": "https://leetcode.cn/problems/palindrome-linked-list/",
+      "category": "链表",
+      "codetop_frequency": 90,
+      "description": "给你一个单链表的头节点 head，请你判断该链表是否为回文链表。如果是，返回 true；否则，返回 false。",
+      "examples": [
+        {
+          "input": "head = [1,2,2,1]",
+          "output": "true",
+          "explanation": "链表 [1,2,2,1] 是回文链表"
+        },
+        {
+          "input": "head = [1,2]",
+          "output": "false",
+          "explanation": "链表 [1,2] 不是回文链表"
+        }
+      ],
+      "constraints": [
+        "链表中节点数目在范围 [1, 10^5] 内",
+        "0 <= Node.val <= 9"
+      ],
+      "function_signature": "def isPalindrome(self, head: Optional[ListNode]) -> bool:",
+      "test_cases": [
+        {"input": {"head": [1, 2, 2, 1]}, "expected": true},
+        {"input": {"head": [1, 2]}, "expected": false},
+        {"input": {"head": [1]}, "expected": true}
+      ]
+    },
+    {
+      "id": 25,
+      "leetcode_id": 141,
+      "title": "环形链表",
+      "title_en": "Linked List Cycle",
+      "difficulty": "Easy",
+      "tags": ["哈希表", "链表", "双指针"],
+      "url": "https://leetcode.cn/problems/linked-list-cycle/",
+      "category": "链表",
+      "codetop_frequency": 170,
+      "description": "给你一个链表的头节点 head，判断链表中是否有环。如果链表中有某个节点，可以通过连续跟踪 next 指针再次到达，则链表中存在环。如果链表中存在环则返回 true，否则返回 false。",
+      "examples": [
+        {
+          "input": "head = [3,2,0,-4], pos = 1",
+          "output": "true",
+          "explanation": "链表中有一个环，其尾部连接到第二个节点"
+        },
+        {
+          "input": "head = [1], pos = -1",
+          "output": "false",
+          "explanation": "链表中没有环"
+        }
+      ],
+      "constraints": [
+        "链表中节点的数目范围是 [0, 10^4]",
+        "-10^5 <= Node.val <= 10^5",
+        "pos 为 -1 或者链表中的一个有效索引"
+      ],
+      "function_signature": "def hasCycle(self, head: Optional[ListNode]) -> bool:",
+      "test_cases": [
+        {"input": {"head": [3, 2, 0, -4], "pos": 1}, "expected": true},
+        {"input": {"head": [1, 2], "pos": 0}, "expected": true},
+        {"input": {"head": [1], "pos": -1}, "expected": false}
+      ]
+    },
+    {
+      "id": 26,
+      "leetcode_id": 142,
+      "title": "环形链表 II",
+      "title_en": "Linked List Cycle II",
+      "difficulty": "Medium",
+      "tags": ["哈希表", "链表", "双指针"],
+      "url": "https://leetcode.cn/problems/linked-list-cycle-ii/",
+      "category": "链表",
+      "codetop_frequency": 150,
+      "description": "给定一个链表的头节点 head，返回链表开始入环的第一个节点。如果链表无环，则返回 null。不允许修改链表。",
+      "examples": [
+        {
+          "input": "head = [3,2,0,-4], pos = 1",
+          "output": "节点值为 2 的节点",
+          "explanation": "链表中有一个环，其尾部连接到第二个节点（索引为1）"
+        },
+        {
+          "input": "head = [1], pos = -1",
+          "output": "null",
+          "explanation": "链表中没有环"
+        }
+      ],
+      "constraints": [
+        "链表中节点的数目范围在范围 [0, 10^4] 内",
+        "-10^5 <= Node.val <= 10^5",
+        "pos 的值为 -1 或者链表中的一个有效索引"
+      ],
+      "function_signature": "def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"head": [3, 2, 0, -4], "pos": 1}, "expected": 1},
+        {"input": {"head": [1, 2], "pos": 0}, "expected": 0},
+        {"input": {"head": [1], "pos": -1}, "expected": -1}
+      ]
+    },
+    {
+      "id": 27,
+      "leetcode_id": 21,
+      "title": "合并两个有序链表",
+      "title_en": "Merge Two Sorted Lists",
+      "difficulty": "Easy",
+      "tags": ["递归", "链表"],
+      "url": "https://leetcode.cn/problems/merge-two-sorted-lists/",
+      "category": "链表",
+      "codetop_frequency": 195,
+      "description": "将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。",
+      "examples": [
+        {
+          "input": "l1 = [1,2,4], l2 = [1,3,4]",
+          "output": "[1,1,2,3,4,4]",
+          "explanation": "合并两个有序链表"
+        },
+        {
+          "input": "l1 = [], l2 = []",
+          "output": "[]",
+          "explanation": "两个空链表合并为空链表"
+        }
+      ],
+      "constraints": [
+        "两个链表的节点数目范围是 [0, 50]",
+        "-100 <= Node.val <= 100",
+        "l1 和 l2 均按非递减顺序排列"
+      ],
+      "function_signature": "def mergeTwoLists(self, list1: Optional[ListNode], list2: Optional[ListNode]) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"list1": [1, 2, 4], "list2": [1, 3, 4]}, "expected": [1, 1, 2, 3, 4, 4]},
+        {"input": {"list1": [], "list2": []}, "expected": []},
+        {"input": {"list1": [], "list2": [0]}, "expected": [0]}
+      ]
+    },
+    {
+      "id": 28,
+      "leetcode_id": 2,
+      "title": "两数相加",
+      "title_en": "Add Two Numbers",
+      "difficulty": "Medium",
+      "tags": ["递归", "链表", "数学"],
+      "url": "https://leetcode.cn/problems/add-two-numbers/",
+      "category": "链表",
+      "codetop_frequency": 220,
+      "description": "给你两个非空的链表，表示两个非负的整数。它们每位数字都是按照逆序的方式存储的，并且每个节点只能存储一位数字。请你将两个数相加，并以相同形式返回一个表示和的链表。你可以假设除了数字 0 之外，这两个数都不会以 0 开头。",
+      "examples": [
+        {
+          "input": "l1 = [2,4,3], l2 = [5,6,4]",
+          "output": "[7,0,8]",
+          "explanation": "342 + 465 = 807"
+        },
+        {
+          "input": "l1 = [0], l2 = [0]",
+          "output": "[0]",
+          "explanation": "0 + 0 = 0"
+        }
+      ],
+      "constraints": [
+        "每个链表中的节点数在范围 [1, 100] 内",
+        "0 <= Node.val <= 9",
+        "题目数据保证列表表示的数字不含前导零"
+      ],
+      "function_signature": "def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"l1": [2, 4, 3], "l2": [5, 6, 4]}, "expected": [7, 0, 8]},
+        {"input": {"l1": [0], "l2": [0]}, "expected": [0]},
+        {"input": {"l1": [9, 9, 9, 9, 9, 9, 9], "l2": [9, 9, 9, 9]}, "expected": [8, 9, 9, 9, 0, 0, 0, 1]}
+      ]
+    },
+    {
+      "id": 29,
+      "leetcode_id": 19,
+      "title": "删除链表的倒数第N个结点",
+      "title_en": "Remove Nth Node From End of List",
+      "difficulty": "Medium",
+      "tags": ["链表", "双指针"],
+      "url": "https://leetcode.cn/problems/remove-nth-node-from-end-of-list/",
+      "category": "链表",
+      "codetop_frequency": 165,
+      "description": "给你一个链表，删除链表的倒数第 n 个结点，并且返回链表的头结点。",
+      "examples": [
+        {
+          "input": "head = [1,2,3,4,5], n = 2",
+          "output": "[1,2,3,5]",
+          "explanation": "删除倒数第2个节点后的链表"
+        },
+        {
+          "input": "head = [1], n = 1",
+          "output": "[]",
+          "explanation": "删除唯一的节点后链表为空"
+        }
+      ],
+      "constraints": [
+        "链表中结点的数目为 sz",
+        "1 <= sz <= 30",
+        "0 <= Node.val <= 100",
+        "1 <= n <= sz"
+      ],
+      "function_signature": "def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"head": [1, 2, 3, 4, 5], "n": 2}, "expected": [1, 2, 3, 5]},
+        {"input": {"head": [1], "n": 1}, "expected": []},
+        {"input": {"head": [1, 2], "n": 1}, "expected": [1]}
+      ]
+    },
+    {
+      "id": 30,
+      "leetcode_id": 24,
+      "title": "两两交换链表中的节点",
+      "title_en": "Swap Nodes in Pairs",
+      "difficulty": "Medium",
+      "tags": ["递归", "链表"],
+      "url": "https://leetcode.cn/problems/swap-nodes-in-pairs/",
+      "category": "链表",
+      "codetop_frequency": 85,
+      "description": "给你一个链表，两两交换其中相邻的节点，并返回交换后链表的头节点。你必须在不修改节点内部的值的情况下完成本题（即只能进行节点交换）。",
+      "examples": [
+        {
+          "input": "head = [1,2,3,4]",
+          "output": "[2,1,4,3]",
+          "explanation": "两两交换后：1和2交换，3和4交换"
+        },
+        {
+          "input": "head = []",
+          "output": "[]",
+          "explanation": "空链表无需交换"
+        }
+      ],
+      "constraints": [
+        "链表中节点的数目在范围 [0, 100] 内",
+        "0 <= Node.val <= 100"
+      ],
+      "function_signature": "def swapPairs(self, head: Optional[ListNode]) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"head": [1, 2, 3, 4]}, "expected": [2, 1, 4, 3]},
+        {"input": {"head": []}, "expected": []},
+        {"input": {"head": [1]}, "expected": [1]}
+      ]
+    },
+    {
+      "id": 31,
+      "leetcode_id": 25,
+      "title": "K个一组翻转链表",
+      "title_en": "Reverse Nodes in k-Group",
+      "difficulty": "Hard",
+      "tags": ["递归", "链表"],
+      "url": "https://leetcode.cn/problems/reverse-nodes-in-k-group/",
+      "category": "链表",
+      "codetop_frequency": 230,
+      "description": "给你链表的头节点 head，每 k 个节点一组进行翻转，请你返回修改后的链表。k 是一个正整数，它的值小于或等于链表的长度。如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。你不能只是单纯地改变节点内部的值，而是需要实际进行节点交换。",
+      "examples": [
+        {
+          "input": "head = [1,2,3,4,5], k = 2",
+          "output": "[2,1,4,3,5]",
+          "explanation": "每2个一组翻转"
+        },
+        {
+          "input": "head = [1,2,3,4,5], k = 3",
+          "output": "[3,2,1,4,5]",
+          "explanation": "每3个一组翻转，最后剩余的2个节点保持原序"
+        }
+      ],
+      "constraints": [
+        "链表中的节点数目为 n",
+        "1 <= k <= n <= 5000",
+        "0 <= Node.val <= 1000"
+      ],
+      "function_signature": "def reverseKGroup(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"head": [1, 2, 3, 4, 5], "k": 2}, "expected": [2, 1, 4, 3, 5]},
+        {"input": {"head": [1, 2, 3, 4, 5], "k": 3}, "expected": [3, 2, 1, 4, 5]},
+        {"input": {"head": [1, 2, 3, 4, 5], "k": 1}, "expected": [1, 2, 3, 4, 5]}
+      ]
+    },
+    {
+      "id": 32,
+      "leetcode_id": 138,
+      "title": "随机链表的复制",
+      "title_en": "Copy List with Random Pointer",
+      "difficulty": "Medium",
+      "tags": ["哈希表", "链表"],
+      "url": "https://leetcode.cn/problems/copy-list-with-random-pointer/",
+      "category": "链表",
+      "codetop_frequency": 95,
+      "description": "给你一个长度为 n 的链表，每个节点包含一个额外增加的随机指针 random，该指针可以指向链表中的任何节点或空节点。构造这个链表的深拷贝。深拷贝应该正好由 n 个全新节点组成，其中每个新节点的值都设为其对应的原节点的值。",
+      "examples": [
+        {
+          "input": "head = [[7,null],[13,0],[11,4],[10,2],[1,0]]",
+          "output": "[[7,null],[13,0],[11,4],[10,2],[1,0]]",
+          "explanation": "深拷贝整个链表，包括random指针"
+        },
+        {
+          "input": "head = [[1,1],[2,1]]",
+          "output": "[[1,1],[2,1]]",
+          "explanation": "深拷贝两个节点的链表"
+        }
+      ],
+      "constraints": [
+        "0 <= n <= 1000",
+        "-10^4 <= Node.val <= 10^4",
+        "Node.random 为 null 或指向链表中的节点"
+      ],
+      "function_signature": "def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':",
+      "test_cases": [
+        {"input": {"head": [[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]}, "expected": [[7, null], [13, 0], [11, 4], [10, 2], [1, 0]]},
+        {"input": {"head": [[1, 1], [2, 1]]}, "expected": [[1, 1], [2, 1]]},
+        {"input": {"head": [[3, null], [3, 0], [3, null]]}, "expected": [[3, null], [3, 0], [3, null]]}
+      ]
+    },
+    {
+      "id": 33,
+      "leetcode_id": 148,
+      "title": "排序链表",
+      "title_en": "Sort List",
+      "difficulty": "Medium",
+      "tags": ["链表", "双指针", "分治", "排序", "归并排序"],
+      "url": "https://leetcode.cn/problems/sort-list/",
+      "category": "链表",
+      "codetop_frequency": 110,
+      "description": "给你链表的头结点 head，请将其按升序排列并返回排序后的链表。要求在 O(n log n) 时间复杂度和常数级空间复杂度下解决此问题。",
+      "examples": [
+        {
+          "input": "head = [4,2,1,3]",
+          "output": "[1,2,3,4]",
+          "explanation": "对链表进行升序排序"
+        },
+        {
+          "input": "head = [-1,5,3,4,0]",
+          "output": "[-1,0,3,4,5]",
+          "explanation": "对链表进行升序排序"
+        }
+      ],
+      "constraints": [
+        "链表中节点的数目在范围 [0, 5 * 10^4] 内",
+        "-10^5 <= Node.val <= 10^5"
+      ],
+      "function_signature": "def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"head": [4, 2, 1, 3]}, "expected": [1, 2, 3, 4]},
+        {"input": {"head": [-1, 5, 3, 4, 0]}, "expected": [-1, 0, 3, 4, 5]},
+        {"input": {"head": []}, "expected": []}
+      ]
+    },
+    {
+      "id": 34,
+      "leetcode_id": 23,
+      "title": "合并K个升序链表",
+      "title_en": "Merge k Sorted Lists",
+      "difficulty": "Hard",
+      "tags": ["链表", "分治", "堆", "归并排序"],
+      "url": "https://leetcode.cn/problems/merge-k-sorted-lists/",
+      "category": "链表",
+      "codetop_frequency": 190,
+      "description": "给你一个链表数组，每个链表都已经按升序排列。请你将所有链表合并到一个升序链表中，返回合并后的链表。",
+      "examples": [
+        {
+          "input": "lists = [[1,4,5],[1,3,4],[2,6]]",
+          "output": "[1,1,2,3,4,4,5,6]",
+          "explanation": "合并三个升序链表为一个升序链表"
+        },
+        {
+          "input": "lists = []",
+          "output": "[]",
+          "explanation": "空数组返回空链表"
+        }
+      ],
+      "constraints": [
+        "k == lists.length",
+        "0 <= k <= 10^4",
+        "0 <= lists[i].length <= 500",
+        "-10^4 <= lists[i][j] <= 10^4",
+        "lists[i] 按升序排列",
+        "lists[i].length 的总和不超过 10^4"
+      ],
+      "function_signature": "def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:",
+      "test_cases": [
+        {"input": {"lists": [[1, 4, 5], [1, 3, 4], [2, 6]]}, "expected": [1, 1, 2, 3, 4, 4, 5, 6]},
+        {"input": {"lists": []}, "expected": []},
+        {"input": {"lists": [[]]}, "expected": []}
+      ]
+    },
+    {
+      "id": 35,
+      "leetcode_id": 146,
+      "title": "LRU缓存",
+      "title_en": "LRU Cache",
+      "difficulty": "Medium",
+      "tags": ["设计", "哈希表", "链表", "双向链表"],
+      "url": "https://leetcode.cn/problems/lru-cache/",
+      "category": "链表",
+      "codetop_frequency": 310,
+      "description": "请你设计并实现一个满足 LRU (最近最少使用) 缓存约束的数据结构。实现 LRUCache 类：LRUCache(int capacity) 以正整数作为容量 capacity 初始化 LRU 缓存；int get(int key) 如果关键字 key 存在于缓存中，则返回关键字的值，否则返回 -1；void put(int key, int value) 如果关键字 key 已经存在，则变更其数据值 value；如果不存在，则向缓存中插入该组 key-value。如果插入操作导致关键字数量超过 capacity，则应该逐出最久未使用的关键字。函数 get 和 put 必须以 O(1) 的平均时间复杂度运行。",
+      "examples": [
+        {
+          "input": "[\"LRUCache\",\"put\",\"put\",\"get\",\"put\",\"get\",\"put\",\"get\",\"get\",\"get\"]\n[[2],[1,1],[2,2],[1],[3,3],[2],[4,4],[1],[3],[4]]",
+          "output": "[null,null,null,1,null,-1,null,-1,3,4]",
+          "explanation": "按照LRU策略管理缓存"
+        }
+      ],
+      "constraints": [
+        "1 <= capacity <= 3000",
+        "0 <= key <= 10^4",
+        "0 <= value <= 10^5",
+        "最多调用 2 * 10^5 次 get 和 put"
+      ],
+      "function_signature": "def __init__(self, capacity: int):\ndef get(self, key: int) -> int:\ndef put(self, key: int, value: int) -> None:",
+      "test_cases": [
+        {"input": {"operations": ["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"], "arguments": [[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]}, "expected": [null, null, null, 1, null, -1, null, -1, 3, 4]},
+        {"input": {"operations": ["LRUCache", "put", "get"], "arguments": [[1], [2, 1], [2]]}, "expected": [null, null, 1]},
+        {"input": {"operations": ["LRUCache", "put", "put", "get", "get"], "arguments": [[1], [1, 1], [2, 2], [1], [2]]}, "expected": [null, null, null, -1, 2]}
+      ]
+    },
+    {
+      "id": 36,
+      "leetcode_id": 94,
+      "title": "二叉树的中序遍历",
+      "title_en": "Binary Tree Inorder Traversal",
+      "difficulty": "Easy",
+      "tags": ["栈", "树", "深度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/binary-tree-inorder-traversal/",
+      "category": "二叉树",
+      "codetop_frequency": 140,
+      "description": "给定一个二叉树的根节点 root，返回它的中序遍历。中序遍历按照左子树-根节点-右子树的顺序遍历二叉树。",
+      "examples": [
+        {
+          "input": "root = [1,null,2,3]",
+          "output": "[1,3,2]",
+          "explanation": "中序遍历：先访问左子树，再访问根节点，最后访问右子树"
+        },
+        {
+          "input": "root = []",
+          "output": "[]",
+          "explanation": "空树返回空数组"
+        }
+      ],
+      "constraints": [
+        "树中节点数目在范围 [0, 100] 内",
+        "-100 <= Node.val <= 100"
+      ],
+      "function_signature": "def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:",
+      "test_cases": [
+        {"input": {"root": [1, null, 2, 3]}, "expected": [1, 3, 2]},
+        {"input": {"root": []}, "expected": []},
+        {"input": {"root": [1]}, "expected": [1]}
+      ]
+    },
+    {
+      "id": 37,
+      "leetcode_id": 104,
+      "title": "二叉树的最大深度",
+      "title_en": "Maximum Depth of Binary Tree",
+      "difficulty": "Easy",
+      "tags": ["树", "深度优先搜索", "广度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/maximum-depth-of-binary-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 120,
+      "description": "给定一个二叉树 root，返回其最大深度。二叉树的最大深度是指从根节点到最远叶子节点的最长路径上的节点数。",
+      "examples": [
+        {
+          "input": "root = [3,9,20,null,null,15,7]",
+          "output": "3",
+          "explanation": "最大深度为3"
+        },
+        {
+          "input": "root = [1,null,2]",
+          "output": "2",
+          "explanation": "最大深度为2"
+        }
+      ],
+      "constraints": [
+        "树中节点的数量在 [0, 10^4] 区间内",
+        "-100 <= Node.val <= 100"
+      ],
+      "function_signature": "def maxDepth(self, root: Optional[TreeNode]) -> int:",
+      "test_cases": [
+        {"input": {"root": [3, 9, 20, null, null, 15, 7]}, "expected": 3},
+        {"input": {"root": [1, null, 2]}, "expected": 2},
+        {"input": {"root": []}, "expected": 0}
+      ]
+    },
+    {
+      "id": 38,
+      "leetcode_id": 226,
+      "title": "翻转二叉树",
+      "title_en": "Invert Binary Tree",
+      "difficulty": "Easy",
+      "tags": ["树", "深度优先搜索", "广度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/invert-binary-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 100,
+      "description": "给你一棵二叉树的根节点 root，翻转这棵二叉树，并返回其根节点。翻转即将每个节点的左右子树交换。",
+      "examples": [
+        {
+          "input": "root = [4,2,7,1,3,6,9]",
+          "output": "[4,7,2,9,6,3,1]",
+          "explanation": "翻转后每个节点的左右子树互换"
+        },
+        {
+          "input": "root = [2,1,3]",
+          "output": "[2,3,1]",
+          "explanation": "交换左右子节点"
+        }
+      ],
+      "constraints": [
+        "树中节点数目范围在 [0, 100] 内",
+        "-100 <= Node.val <= 100"
+      ],
+      "function_signature": "def invertTree(self, root: Optional[TreeNode]) -> Optional[TreeNode]:",
+      "test_cases": [
+        {"input": {"root": [4, 2, 7, 1, 3, 6, 9]}, "expected": [4, 7, 2, 9, 6, 3, 1]},
+        {"input": {"root": [2, 1, 3]}, "expected": [2, 3, 1]},
+        {"input": {"root": []}, "expected": []}
+      ]
+    },
+    {
+      "id": 39,
+      "leetcode_id": 101,
+      "title": "对称二叉树",
+      "title_en": "Symmetric Tree",
+      "difficulty": "Easy",
+      "tags": ["树", "深度优先搜索", "广度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/symmetric-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 110,
+      "description": "给你一个二叉树的根节点 root，检查它是否轴对称。即左子树和右子树是否是镜像对称的。",
+      "examples": [
+        {
+          "input": "root = [1,2,2,3,4,4,3]",
+          "output": "true",
+          "explanation": "该二叉树是轴对称的"
+        },
+        {
+          "input": "root = [1,2,2,null,3,null,3]",
+          "output": "false",
+          "explanation": "该二叉树不是轴对称的"
+        }
+      ],
+      "constraints": [
+        "树中节点数目在范围 [1, 1000] 内",
+        "-100 <= Node.val <= 100"
+      ],
+      "function_signature": "def isSymmetric(self, root: Optional[TreeNode]) -> bool:",
+      "test_cases": [
+        {"input": {"root": [1, 2, 2, 3, 4, 4, 3]}, "expected": true},
+        {"input": {"root": [1, 2, 2, null, 3, null, 3]}, "expected": false},
+        {"input": {"root": [1]}, "expected": true}
+      ]
+    },
+    {
+      "id": 40,
+      "leetcode_id": 543,
+      "title": "二叉树的直径",
+      "title_en": "Diameter of Binary Tree",
+      "difficulty": "Easy",
+      "tags": ["树", "深度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/diameter-of-binary-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 85,
+      "description": "给你一棵二叉树的根节点，返回该树的直径。二叉树的直径是指树中任意两个节点之间最长路径的长度。这条路径可能经过也可能不经过根节点 root。两节点之间路径的长度由它们之间边的数目表示。",
+      "examples": [
+        {
+          "input": "root = [1,2,3,4,5]",
+          "output": "3",
+          "explanation": "取路径 [4,2,1,3] 或者 [5,2,1,3] 的长度"
+        },
+        {
+          "input": "root = [1,2]",
+          "output": "1",
+          "explanation": "直径为1"
+        }
+      ],
+      "constraints": [
+        "树中节点数目在范围 [1, 10^4] 内",
+        "-100 <= Node.val <= 100"
+      ],
+      "function_signature": "def diameterOfBinaryTree(self, root: Optional[TreeNode]) -> int:",
+      "test_cases": [
+        {"input": {"root": [1, 2, 3, 4, 5]}, "expected": 3},
+        {"input": {"root": [1, 2]}, "expected": 1},
+        {"input": {"root": [1]}, "expected": 0}
+      ]
+    },
+    {
+      "id": 41,
+      "leetcode_id": 102,
+      "title": "二叉树的层序遍历",
+      "title_en": "Binary Tree Level Order Traversal",
+      "difficulty": "Medium",
+      "tags": ["树", "广度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/binary-tree-level-order-traversal/",
+      "category": "二叉树",
+      "codetop_frequency": 175,
+      "description": "给你二叉树的根节点 root，返回其节点值的层序遍历。即逐层地，从左到右访问所有节点。",
+      "examples": [
+        {
+          "input": "root = [3,9,20,null,null,15,7]",
+          "output": "[[3],[9,20],[15,7]]",
+          "explanation": "层序遍历：第一层[3]，第二层[9,20]，第三层[15,7]"
+        },
+        {
+          "input": "root = [1]",
+          "output": "[[1]]",
+          "explanation": "只有根节点一层"
+        }
+      ],
+      "constraints": [
+        "树中节点数目在范围 [0, 2000] 内",
+        "-1000 <= Node.val <= 1000"
+      ],
+      "function_signature": "def levelOrder(self, root: Optional[TreeNode]) -> List[List[int]]:",
+      "test_cases": [
+        {"input": {"root": [3, 9, 20, null, null, 15, 7]}, "expected": [[3], [9, 20], [15, 7]]},
+        {"input": {"root": [1]}, "expected": [[1]]},
+        {"input": {"root": []}, "expected": []}
+      ]
+    },
+    {
+      "id": 42,
+      "leetcode_id": 108,
+      "title": "将有序数组转换为二叉搜索树",
+      "title_en": "Convert Sorted Array to Binary Search Tree",
+      "difficulty": "Easy",
+      "tags": ["树", "二叉搜索树", "数组", "分治", "二叉树"],
+      "url": "https://leetcode.cn/problems/convert-sorted-array-to-binary-search-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 65,
+      "description": "给你一个整数数组 nums，其中元素已经按升序排列，请你将其转换为一棵高度平衡二叉搜索树。高度平衡二叉树是一棵满足每个节点的左右两个子树的高度差的绝对值不超过 1 的二叉树。",
+      "examples": [
+        {
+          "input": "nums = [-10,-3,0,5,9]",
+          "output": "[0,-3,9,-10,null,5]",
+          "explanation": "选择中间元素作为根节点，递归构建左右子树"
+        },
+        {
+          "input": "nums = [1,3]",
+          "output": "[3,1]",
+          "explanation": "选择任一元素作为根节点均可"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^4",
+        "-10^4 <= nums[i] <= 10^4",
+        "nums 按严格递增顺序排列"
+      ],
+      "function_signature": "def sortedArrayToBST(self, nums: List[int]) -> Optional[TreeNode]:",
+      "test_cases": [
+        {"input": {"nums": [-10, -3, 0, 5, 9]}, "expected": [0, -3, 9, -10, null, 5]},
+        {"input": {"nums": [1, 3]}, "expected": [3, 1]},
+        {"input": {"nums": [0]}, "expected": [0]}
+      ]
+    },
+    {
+      "id": 43,
+      "leetcode_id": 98,
+      "title": "验证二叉搜索树",
+      "title_en": "Validate Binary Search Tree",
+      "difficulty": "Medium",
+      "tags": ["树", "深度优先搜索", "二叉搜索树", "二叉树"],
+      "url": "https://leetcode.cn/problems/validate-binary-search-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 155,
+      "description": "给你一个二叉树的根节点 root，判断其是否是一个有效的二叉搜索树。有效二叉搜索树定义如下：节点的左子树只包含小于当前节点的数，节点的右子树只包含大于当前节点的数，所有左子树和右子树自身必须也是二叉搜索树。",
+      "examples": [
+        {
+          "input": "root = [2,1,3]",
+          "output": "true",
+          "explanation": "这是一个有效的二叉搜索树"
+        },
+        {
+          "input": "root = [5,1,4,null,null,3,6]",
+          "output": "false",
+          "explanation": "根节点的值是 5，但是右子节点的值是 4，不满足BST条件"
+        }
+      ],
+      "constraints": [
+        "树中节点数目范围在 [1, 10^4] 内",
+        "-2^31 <= Node.val <= 2^31 - 1"
+      ],
+      "function_signature": "def isValidBST(self, root: Optional[TreeNode]) -> bool:",
+      "test_cases": [
+        {"input": {"root": [2, 1, 3]}, "expected": true},
+        {"input": {"root": [5, 1, 4, null, null, 3, 6]}, "expected": false},
+        {"input": {"root": [1]}, "expected": true}
+      ]
+    },
+    {
+      "id": 44,
+      "leetcode_id": 230,
+      "title": "二叉搜索树中第K小的元素",
+      "title_en": "Kth Smallest Element in a BST",
+      "difficulty": "Medium",
+      "tags": ["树", "深度优先搜索", "二叉搜索树", "二叉树"],
+      "url": "https://leetcode.cn/problems/kth-smallest-element-in-a-bst/",
+      "category": "二叉树",
+      "codetop_frequency": 90,
+      "description": "给定一个二叉搜索树的根节点 root，和一个整数 k，请你设计一个算法查找其中第 k 个最小元素（从 1 开始计数）。",
+      "examples": [
+        {
+          "input": "root = [3,1,4,null,2], k = 1",
+          "output": "1",
+          "explanation": "BST中第1小的元素是1"
+        },
+        {
+          "input": "root = [5,3,6,2,4,null,null,1], k = 3",
+          "output": "3",
+          "explanation": "BST中第3小的元素是3"
+        }
+      ],
+      "constraints": [
+        "树中的节点数为 n",
+        "1 <= k <= n <= 10^4",
+        "0 <= Node.val <= 10^4"
+      ],
+      "function_signature": "def kthSmallest(self, root: Optional[TreeNode], k: int) -> int:",
+      "test_cases": [
+        {"input": {"root": [3, 1, 4, null, 2], "k": 1}, "expected": 1},
+        {"input": {"root": [5, 3, 6, 2, 4, null, null, 1], "k": 3}, "expected": 3},
+        {"input": {"root": [1], "k": 1}, "expected": 1}
+      ]
+    },
+    {
+      "id": 45,
+      "leetcode_id": 199,
+      "title": "二叉树的右视图",
+      "title_en": "Binary Tree Right Side View",
+      "difficulty": "Medium",
+      "tags": ["树", "深度优先搜索", "广度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/binary-tree-right-side-view/",
+      "category": "二叉树",
+      "codetop_frequency": 130,
+      "description": "给定一个二叉树的根节点 root，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。",
+      "examples": [
+        {
+          "input": "root = [1,2,3,null,5,null,4]",
+          "output": "[1,3,4]",
+          "explanation": "从右侧看到的节点为1、3、4"
+        },
+        {
+          "input": "root = [1,null,3]",
+          "output": "[1,3]",
+          "explanation": "从右侧看到的节点为1、3"
+        }
+      ],
+      "constraints": [
+        "二叉树的节点个数的范围是 [0, 100]",
+        "-100 <= Node.val <= 100"
+      ],
+      "function_signature": "def rightSideView(self, root: Optional[TreeNode]) -> List[int]:",
+      "test_cases": [
+        {"input": {"root": [1, 2, 3, null, 5, null, 4]}, "expected": [1, 3, 4]},
+        {"input": {"root": [1, null, 3]}, "expected": [1, 3]},
+        {"input": {"root": []}, "expected": []}
+      ]
+    },
+    {
+      "id": 46,
+      "leetcode_id": 114,
+      "title": "二叉树展开为链表",
+      "title_en": "Flatten Binary Tree to Linked List",
+      "difficulty": "Medium",
+      "tags": ["栈", "树", "深度优先搜索", "链表", "二叉树"],
+      "url": "https://leetcode.cn/problems/flatten-binary-tree-to-linked-list/",
+      "category": "二叉树",
+      "codetop_frequency": 95,
+      "description": "给你二叉树的根结点 root，请你将它展开为一个单链表。展开后的单链表应该同样使用 TreeNode，其中 right 子指针指向链表中下一个结点，而左子指针始终为 null。展开后的单链表应该与二叉树先序遍历顺序相同。",
+      "examples": [
+        {
+          "input": "root = [1,2,5,3,4,null,6]",
+          "output": "[1,null,2,null,3,null,4,null,5,null,6]",
+          "explanation": "按前序遍历展开为链表"
+        },
+        {
+          "input": "root = []",
+          "output": "[]",
+          "explanation": "空树无需展开"
+        }
+      ],
+      "constraints": [
+        "树中结点数在范围 [0, 2000] 内",
+        "-100 <= Node.val <= 100"
+      ],
+      "function_signature": "def flatten(self, root: Optional[TreeNode]) -> None:",
+      "test_cases": [
+        {"input": {"root": [1, 2, 5, 3, 4, null, 6]}, "expected": [1, null, 2, null, 3, null, 4, null, 5, null, 6]},
+        {"input": {"root": []}, "expected": []},
+        {"input": {"root": [0]}, "expected": [0]}
+      ]
+    },
+    {
+      "id": 47,
+      "leetcode_id": 105,
+      "title": "从前序与中序遍历序列构造二叉树",
+      "title_en": "Construct Binary Tree from Preorder and Inorder Traversal",
+      "difficulty": "Medium",
+      "tags": ["树", "数组", "哈希表", "分治", "二叉树"],
+      "url": "https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
+      "category": "二叉树",
+      "codetop_frequency": 140,
+      "description": "给定两个整数数组 preorder 和 inorder，其中 preorder 是二叉树的先序遍历，inorder 是同一棵树的中序遍历，请构造二叉树并返回其根节点。",
+      "examples": [
+        {
+          "input": "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]",
+          "output": "[3,9,20,null,null,15,7]",
+          "explanation": "根据前序和中序遍历构造二叉树"
+        },
+        {
+          "input": "preorder = [-1], inorder = [-1]",
+          "output": "[-1]",
+          "explanation": "只有一个节点"
+        }
+      ],
+      "constraints": [
+        "1 <= preorder.length <= 3000",
+        "inorder.length == preorder.length",
+        "-3000 <= preorder[i], inorder[i] <= 3000",
+        "preorder 和 inorder 均无重复元素",
+        "inorder 均出现在 preorder",
+        "preorder 保证为二叉树的前序遍历序列",
+        "inorder 保证为二叉树的中序遍历序列"
+      ],
+      "function_signature": "def buildTree(self, preorder: List[int], inorder: List[int]) -> Optional[TreeNode]:",
+      "test_cases": [
+        {"input": {"preorder": [3, 9, 20, 15, 7], "inorder": [9, 3, 15, 20, 7]}, "expected": [3, 9, 20, null, null, 15, 7]},
+        {"input": {"preorder": [-1], "inorder": [-1]}, "expected": [-1]},
+        {"input": {"preorder": [1, 2], "inorder": [2, 1]}, "expected": [1, 2]}
+      ]
+    },
+    {
+      "id": 48,
+      "leetcode_id": 437,
+      "title": "路径总和 III",
+      "title_en": "Path Sum III",
+      "difficulty": "Medium",
+      "tags": ["树", "深度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/path-sum-iii/",
+      "category": "二叉树",
+      "codetop_frequency": 70,
+      "description": "给定一个二叉树的根节点 root，和一个整数 targetSum，求该二叉树里节点值之和等于 targetSum 的路径的数目。路径不需要从根节点开始，也不需要在叶子节点结束，但是路径方向必须是向下的（只能从父节点到子节点）。",
+      "examples": [
+        {
+          "input": "root = [10,5,-3,3,2,null,11,3,-2,null,1], targetSum = 8",
+          "output": "3",
+          "explanation": "和等于 8 的路径有 3 条：5->3, 5->2->1, -3->11"
+        },
+        {
+          "input": "root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22",
+          "output": "3",
+          "explanation": "和等于 22 的路径有 3 条"
+        }
+      ],
+      "constraints": [
+        "二叉树的节点个数的范围是 [0, 1000]",
+        "-10^9 <= Node.val <= 10^9",
+        "-1000 <= targetSum <= 1000"
+      ],
+      "function_signature": "def pathSum(self, root: Optional[TreeNode], targetSum: int) -> int:",
+      "test_cases": [
+        {"input": {"root": [10, 5, -3, 3, 2, null, 11, 3, -2, null, 1], "targetSum": 8}, "expected": 3},
+        {"input": {"root": [5, 4, 8, 11, null, 13, 4, 7, 2, null, null, 5, 1], "targetSum": 22}, "expected": 3},
+        {"input": {"root": [], "targetSum": 0}, "expected": 0}
+      ]
+    },
+    {
+      "id": 49,
+      "leetcode_id": 236,
+      "title": "二叉树的最近公共祖先",
+      "title_en": "Lowest Common Ancestor of a Binary Tree",
+      "difficulty": "Medium",
+      "tags": ["树", "深度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 200,
+      "description": "给定一个二叉树，找到该树中两个指定节点的最近公共祖先。最近公共祖先的定义为：对于有根树 T 的两个节点 p、q，最近公共祖先表示为一个节点 x，满足 x 是 p、q 的祖先且 x 的深度尽可能大（一个节点也可以是它自己的祖先）。",
+      "examples": [
+        {
+          "input": "root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1",
+          "output": "3",
+          "explanation": "节点 5 和节点 1 的最近公共祖先是节点 3"
+        },
+        {
+          "input": "root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4",
+          "output": "5",
+          "explanation": "节点 5 和节点 4 的最近公共祖先是节点 5"
+        }
+      ],
+      "constraints": [
+        "树中节点数目在范围 [2, 10^5] 内",
+        "-10^9 <= Node.val <= 10^9",
+        "所有 Node.val 互不相同",
+        "p != q",
+        "p 和 q 均存在于给定的二叉树中"
+      ],
+      "function_signature": "def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':",
+      "test_cases": [
+        {"input": {"root": [3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], "p": 5, "q": 1}, "expected": 3},
+        {"input": {"root": [3, 5, 1, 6, 2, 0, 8, null, null, 7, 4], "p": 5, "q": 4}, "expected": 5},
+        {"input": {"root": [1, 2], "p": 1, "q": 2}, "expected": 1}
+      ]
+    },
+    {
+      "id": 50,
+      "leetcode_id": 124,
+      "title": "二叉树中的最大路径和",
+      "title_en": "Binary Tree Maximum Path Sum",
+      "difficulty": "Hard",
+      "tags": ["树", "深度优先搜索", "动态规划", "二叉树"],
+      "url": "https://leetcode.cn/problems/binary-tree-maximum-path-sum/",
+      "category": "二叉树",
+      "codetop_frequency": 160,
+      "description": "二叉树中的路径被定义为一条节点序列，序列中每对相邻节点之间都存在一条边。同一个节点在一条路径序列中至多出现一次。该路径至少包含一个节点，且不一定经过根节点。路径和是路径中各节点值的总和。给你一个二叉树的根节点 root，返回其最大路径和。",
+      "examples": [
+        {
+          "input": "root = [1,2,3]",
+          "output": "6",
+          "explanation": "最优路径是 2 -> 1 -> 3 ，路径和为 2 + 1 + 3 = 6"
+        },
+        {
+          "input": "root = [-10,9,20,null,null,15,7]",
+          "output": "42",
+          "explanation": "最优路径是 15 -> 20 -> 7 ，路径和为 15 + 20 + 7 = 42"
+        }
+      ],
+      "constraints": [
+        "树中节点数目范围是 [1, 3 * 10^4]",
+        "-1000 <= Node.val <= 1000"
+      ],
+      "function_signature": "def maxPathSum(self, root: Optional[TreeNode]) -> int:",
+      "test_cases": [
+        {"input": {"root": [1, 2, 3]}, "expected": 6},
+        {"input": {"root": [-10, 9, 20, null, null, 15, 7]}, "expected": 42},
+        {"input": {"root": [-3]}, "expected": -3}
+      ]
+    },
+    {
+      "id": 51,
+      "leetcode_id": 617,
+      "title": "合并二叉树",
+      "title_en": "Merge Two Binary Trees",
+      "difficulty": "Easy",
+      "tags": ["树", "深度优先搜索", "广度优先搜索", "二叉树"],
+      "url": "https://leetcode.cn/problems/merge-two-binary-trees/",
+      "category": "二叉树",
+      "codetop_frequency": 55,
+      "description": "给你两棵二叉树 root1 和 root2。将两棵树合并为一棵新二叉树。合并的规则是：如果两个节点重叠，那么将这两个节点的值相加作为合并后节点的新值；否则，不为 null 的节点将直接作为新二叉树的节点。",
+      "examples": [
+        {
+          "input": "root1 = [1,3,2,5], root2 = [2,1,3,null,4,null,7]",
+          "output": "[3,4,5,5,4,null,7]",
+          "explanation": "重叠节点值相加，非空节点直接保留"
+        },
+        {
+          "input": "root1 = [1], root2 = [1,2]",
+          "output": "[2,2]",
+          "explanation": "根节点值相加为2，左子节点只有root2有"
+        }
+      ],
+      "constraints": [
+        "两棵树中的节点数目在范围 [0, 2000] 内",
+        "-10^4 <= Node.val <= 10^4"
+      ],
+      "function_signature": "def mergeTrees(self, root1: Optional[TreeNode], root2: Optional[TreeNode]) -> Optional[TreeNode]:",
+      "test_cases": [
+        {"input": {"root1": [1, 3, 2, 5], "root2": [2, 1, 3, null, 4, null, 7]}, "expected": [3, 4, 5, 5, 4, null, 7]},
+        {"input": {"root1": [1], "root2": [1, 2]}, "expected": [2, 2]},
+        {"input": {"root1": [], "root2": [1]}, "expected": [1]}
+      ]
+    },
+    {
+      "id": 52,
+      "leetcode_id": 538,
+      "title": "把二叉搜索树转换为累加树",
+      "title_en": "Convert BST to Greater Tree",
+      "difficulty": "Medium",
+      "tags": ["树", "深度优先搜索", "二叉搜索树", "二叉树"],
+      "url": "https://leetcode.cn/problems/convert-bst-to-greater-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 50,
+      "description": "给出二叉搜索树的根节点，该树的节点值各不相同，请你将其转换为累加树（Greater Sum Tree），使每个节点 node 的新值等于原树中大于或等于 node.val 的值之和。",
+      "examples": [
+        {
+          "input": "root = [4,1,6,0,2,5,7,null,null,null,3,null,null,null,8]",
+          "output": "[30,36,21,36,35,26,15,null,null,null,33,null,null,null,8]",
+          "explanation": "将BST转换为累加树"
+        },
+        {
+          "input": "root = [0,null,1]",
+          "output": "[1,null,1]",
+          "explanation": "根节点值变为0+1=1"
+        }
+      ],
+      "constraints": [
+        "树中的节点数介于 0 和 10^4 之间",
+        "每个节点的值介于 -10^4 和 10^4 之间",
+        "树中的所有值互不相同",
+        "给定的树为二叉搜索树"
+      ],
+      "function_signature": "def convertBST(self, root: Optional[TreeNode]) -> Optional[TreeNode]:",
+      "test_cases": [
+        {"input": {"root": [4, 1, 6, 0, 2, 5, 7, null, null, null, 3, null, null, null, 8]}, "expected": [30, 36, 21, 36, 35, 26, 15, null, null, null, 33, null, null, null, 8]},
+        {"input": {"root": [0, null, 1]}, "expected": [1, null, 1]},
+        {"input": {"root": []}, "expected": []}
+      ]
+    },
+    {
+      "id": 53,
+      "leetcode_id": 297,
+      "title": "二叉树的序列化与反序列化",
+      "title_en": "Serialize and Deserialize Binary Tree",
+      "difficulty": "Hard",
+      "tags": ["树", "深度优先搜索", "广度优先搜索", "设计", "字符串", "二叉树"],
+      "url": "https://leetcode.cn/problems/serialize-and-deserialize-binary-tree/",
+      "category": "二叉树",
+      "codetop_frequency": 120,
+      "description": "序列化是将一个数据结构或者对象转换为连续的比特位的操作，进而可以将转换后的数据存储在一个文件或者内存中，同时也可以通过网络传输到另一个计算机环境，采取相反方式重构得到原数据。请设计一个算法来实现二叉树的序列化与反序列化。",
+      "examples": [
+        {
+          "input": "root = [1,2,3,null,null,4,5]",
+          "output": "[1,2,3,null,null,4,5]",
+          "explanation": "序列化后再反序列化得到相同的树"
+        },
+        {
+          "input": "root = []",
+          "output": "[]",
+          "explanation": "空树序列化后反序列化仍为空树"
+        }
+      ],
+      "constraints": [
+        "树中结点数在范围 [0, 10^4] 内",
+        "-1000 <= Node.val <= 1000"
+      ],
+      "function_signature": "def serialize(self, root: TreeNode) -> str:\ndef deserialize(self, data: str) -> TreeNode:",
+      "test_cases": [
+        {"input": {"root": [1, 2, 3, null, null, 4, 5]}, "expected": [1, 2, 3, null, null, 4, 5]},
+        {"input": {"root": []}, "expected": []},
+        {"input": {"root": [1]}, "expected": [1]}
+      ]
+    },
+    {
+      "id": 54,
+      "leetcode_id": 200,
+      "title": "岛屿数量",
+      "title_en": "Number of Islands",
+      "difficulty": "Medium",
+      "tags": ["深度优先搜索", "广度优先搜索", "并查集", "数组", "矩阵"],
+      "url": "https://leetcode.cn/problems/number-of-islands/",
+      "category": "图论",
+      "codetop_frequency": 240,
+      "description": "给你一个由 '1'（陆地）和 '0'（水）组成的的二维网格，请你计算网格中岛屿的数量。岛屿总是被水包围，并且每座岛屿只能由水平方向和/或垂直方向上相邻的陆地连接形成。此外你可以假设该网格的四条边均被水包围。",
+      "examples": [
+        {
+          "input": "grid = [[\"1\",\"1\",\"1\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"1\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"0\",\"0\"]]",
+          "output": "1",
+          "explanation": "只有一个岛屿"
+        },
+        {
+          "input": "grid = [[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"1\",\"1\",\"0\",\"0\",\"0\"],[\"0\",\"0\",\"1\",\"0\",\"0\"],[\"0\",\"0\",\"0\",\"1\",\"1\"]]",
+          "output": "3",
+          "explanation": "有三个岛屿"
+        }
+      ],
+      "constraints": [
+        "m == grid.length",
+        "n == grid[i].length",
+        "1 <= m, n <= 300",
+        "grid[i][j] 的值为 '0' 或 '1'"
+      ],
+      "function_signature": "def numIslands(self, grid: List[List[str]]) -> int:",
+      "test_cases": [
+        {"input": {"grid": [["1", "1", "1", "1", "0"], ["1", "1", "0", "1", "0"], ["1", "1", "0", "0", "0"], ["0", "0", "0", "0", "0"]]}, "expected": 1},
+        {"input": {"grid": [["1", "1", "0", "0", "0"], ["1", "1", "0", "0", "0"], ["0", "0", "1", "0", "0"], ["0", "0", "0", "1", "1"]]}, "expected": 3},
+        {"input": {"grid": [["1"]]}, "expected": 1}
+      ]
+    },
+    {
+      "id": 55,
+      "leetcode_id": 994,
+      "title": "腐烂的橘子",
+      "title_en": "Rotting Oranges",
+      "difficulty": "Medium",
+      "tags": ["广度优先搜索", "数组", "矩阵"],
+      "url": "https://leetcode.cn/problems/rotting-oranges/",
+      "category": "图论",
+      "codetop_frequency": 75,
+      "description": "在给定的 m x n 网格 grid 中，每个单元格可以有以下三个值之一：值 0 代表空单元格；值 1 代表新鲜橘子；值 2 代表腐烂的橘子。每分钟，腐烂的橘子周围 4 个方向上相邻的新鲜橘子都会腐烂。返回直到单元格中没有新鲜橘子为止所必须经过的最小分钟数。如果不可能，返回 -1。",
+      "examples": [
+        {
+          "input": "grid = [[2,1,1],[1,1,0],[0,1,1]]",
+          "output": "4",
+          "explanation": "需要4分钟所有橘子才能腐烂"
+        },
+        {
+          "input": "grid = [[2,1,1],[0,1,1],[1,0,1]]",
+          "output": "-1",
+          "explanation": "左下角的橘子永远不会腐烂"
+        }
+      ],
+      "constraints": [
+        "m == grid.length",
+        "n == grid[i].length",
+        "1 <= m, n <= 10",
+        "grid[i][j] 仅为 0、1 或 2"
+      ],
+      "function_signature": "def orangesRotting(self, grid: List[List[int]]) -> int:",
+      "test_cases": [
+        {"input": {"grid": [[2, 1, 1], [1, 1, 0], [0, 1, 1]]}, "expected": 4},
+        {"input": {"grid": [[2, 1, 1], [0, 1, 1], [1, 0, 1]]}, "expected": -1},
+        {"input": {"grid": [[0, 2]]}, "expected": 0}
+      ]
+    },
+    {
+      "id": 56,
+      "leetcode_id": 207,
+      "title": "课程表",
+      "title_en": "Course Schedule",
+      "difficulty": "Medium",
+      "tags": ["深度优先搜索", "广度优先搜索", "图", "拓扑排序"],
+      "url": "https://leetcode.cn/problems/course-schedule/",
+      "category": "图论",
+      "codetop_frequency": 135,
+      "description": "你这个学期必须选修 numCourses 门课程，记为 0 到 numCourses - 1。在选修某些课程之前需要一些先修课程。先修课程按数组 prerequisites 给出，其中 prerequisites[i] = [ai, bi]，表示如果要学习课程 ai 则必须先学习课程 bi。请你判断是否可能完成所有课程的学习。",
+      "examples": [
+        {
+          "input": "numCourses = 2, prerequisites = [[1,0]]",
+          "output": "true",
+          "explanation": "总共有 2 门课程。学习课程 1 之前，你需要完成课程 0 。这是可能的。"
+        },
+        {
+          "input": "numCourses = 2, prerequisites = [[1,0],[0,1]]",
+          "output": "false",
+          "explanation": "总共有 2 门课程。存在循环依赖，无法完成。"
+        }
+      ],
+      "constraints": [
+        "1 <= numCourses <= 2000",
+        "0 <= prerequisites.length <= 5000",
+        "prerequisites[i].length == 2",
+        "0 <= ai, bi < numCourses",
+        "prerequisites[i] 中的所有课程对互不相同"
+      ],
+      "function_signature": "def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:",
+      "test_cases": [
+        {"input": {"numCourses": 2, "prerequisites": [[1, 0]]}, "expected": true},
+        {"input": {"numCourses": 2, "prerequisites": [[1, 0], [0, 1]]}, "expected": false},
+        {"input": {"numCourses": 1, "prerequisites": []}, "expected": true}
+      ]
+    },
+    {
+      "id": 57,
+      "leetcode_id": 208,
+      "title": "实现 Trie (前缀树)",
+      "title_en": "Implement Trie (Prefix Tree)",
+      "difficulty": "Medium",
+      "tags": ["设计", "字典树", "哈希表", "字符串"],
+      "url": "https://leetcode.cn/problems/implement-trie-prefix-tree/",
+      "category": "图论",
+      "codetop_frequency": 100,
+      "description": "Trie（发音类似 \"try\"）或者说前缀树是一种树形数据结构，用于高效地存储和检索字符串数据集中的键。这一数据结构有相当多的应用情景，例如自动补完和拼写检查。请你实现 Trie 类。",
+      "examples": [
+        {
+          "input": "[\"Trie\",\"insert\",\"search\",\"search\",\"startsWith\",\"insert\",\"search\"]\n[[],[\"apple\"],[\"apple\"],[\"app\"],[\"app\"],[\"app\"],[\"app\"]]",
+          "output": "[null,null,true,false,true,null,true]",
+          "explanation": "插入apple后搜索apple返回true，搜索app返回false，前缀app存在返回true"
+        }
+      ],
+      "constraints": [
+        "1 <= word.length, prefix.length <= 2000",
+        "word 和 prefix 仅由小写英文字母组成",
+        "insert、search 和 startsWith 调用次数总计不超过 3 * 10^4 次"
+      ],
+      "function_signature": "def __init__(self):\ndef insert(self, word: str) -> None:\ndef search(self, word: str) -> bool:\ndef startsWith(self, prefix: str) -> bool:",
+      "test_cases": [
+        {"input": {"operations": ["Trie", "insert", "search", "search", "startsWith", "insert", "search"], "arguments": [[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]}, "expected": [null, null, true, false, true, null, true]},
+        {"input": {"operations": ["Trie", "insert", "search"], "arguments": [[], ["hello"], ["hello"]]}, "expected": [null, null, true]},
+        {"input": {"operations": ["Trie", "insert", "startsWith"], "arguments": [[], ["abc"], ["ab"]]}, "expected": [null, null, true]}
+      ]
+    },
+    {
+      "id": 58,
+      "leetcode_id": 46,
+      "title": "全排列",
+      "title_en": "Permutations",
+      "difficulty": "Medium",
+      "tags": ["数组", "回溯"],
+      "url": "https://leetcode.cn/problems/permutations/",
+      "category": "回溯",
+      "codetop_frequency": 170,
+      "description": "给定一个不含重复数字的数组 nums，返回其所有可能的全排列。你可以按任意顺序返回答案。",
+      "examples": [
+        {
+          "input": "nums = [1,2,3]",
+          "output": "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]",
+          "explanation": "返回所有可能的排列"
+        },
+        {
+          "input": "nums = [0,1]",
+          "output": "[[0,1],[1,0]]",
+          "explanation": "两个元素的全排列"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 6",
+        "-10 <= nums[i] <= 10",
+        "nums 中的所有整数互不相同"
+      ],
+      "function_signature": "def permute(self, nums: List[int]) -> List[List[int]]:",
+      "test_cases": [
+        {"input": {"nums": [1, 2, 3]}, "expected": [[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]},
+        {"input": {"nums": [0, 1]}, "expected": [[0, 1], [1, 0]]},
+        {"input": {"nums": [1]}, "expected": [[1]]}
+      ]
+    },
+    {
+      "id": 59,
+      "leetcode_id": 78,
+      "title": "子集",
+      "title_en": "Subsets",
+      "difficulty": "Medium",
+      "tags": ["位运算", "数组", "回溯"],
+      "url": "https://leetcode.cn/problems/subsets/",
+      "category": "回溯",
+      "codetop_frequency": 95,
+      "description": "给你一个整数数组 nums，数组中的元素互不相同。返回该数组所有可能的子集（幂集）。解集不能包含重复的子集。你可以按任意顺序返回解集。",
+      "examples": [
+        {
+          "input": "nums = [1,2,3]",
+          "output": "[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]",
+          "explanation": "返回所有可能的子集"
+        },
+        {
+          "input": "nums = [0]",
+          "output": "[[],[0]]",
+          "explanation": "空集和包含0的集合"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10",
+        "-10 <= nums[i] <= 10",
+        "nums 中的所有元素互不相同"
+      ],
+      "function_signature": "def subsets(self, nums: List[int]) -> List[List[int]]:",
+      "test_cases": [
+        {"input": {"nums": [1, 2, 3]}, "expected": [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]},
+        {"input": {"nums": [0]}, "expected": [[], [0]]},
+        {"input": {"nums": [1, 2]}, "expected": [[], [1], [2], [1, 2]]}
+      ]
+    },
+    {
+      "id": 60,
+      "leetcode_id": 17,
+      "title": "电话号码的字母组合",
+      "title_en": "Letter Combinations of a Phone Number",
+      "difficulty": "Medium",
+      "tags": ["哈希表", "字符串", "回溯"],
+      "url": "https://leetcode.cn/problems/letter-combinations-of-a-phone-number/",
+      "category": "回溯",
+      "codetop_frequency": 130,
+      "description": "给定一个仅包含数字 2-9 的字符串，返回所有它能表示的字母组合。答案可以按任意顺序返回。给出数字到字母的映射与电话按键相同。注意 1 不对应任何字母。",
+      "examples": [
+        {
+          "input": "digits = \"23\"",
+          "output": "[\"ad\",\"ae\",\"af\",\"bd\",\"be\",\"bf\",\"cd\",\"ce\",\"cf\"]",
+          "explanation": "2对应abc，3对应def，所有组合"
+        },
+        {
+          "input": "digits = \"\"",
+          "output": "[]",
+          "explanation": "空字符串返回空数组"
+        }
+      ],
+      "constraints": [
+        "0 <= digits.length <= 4",
+        "digits[i] 是范围 ['2', '9'] 的一个数字"
+      ],
+      "function_signature": "def letterCombinations(self, digits: str) -> List[str]:",
+      "test_cases": [
+        {"input": {"digits": "23"}, "expected": ["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]},
+        {"input": {"digits": ""}, "expected": []},
+        {"input": {"digits": "2"}, "expected": ["a", "b", "c"]}
+      ]
+    },
+    {
+      "id": 61,
+      "leetcode_id": 39,
+      "title": "组合总和",
+      "title_en": "Combination Sum",
+      "difficulty": "Medium",
+      "tags": ["数组", "回溯"],
+      "url": "https://leetcode.cn/problems/combination-sum/",
+      "category": "回溯",
+      "codetop_frequency": 110,
+      "description": "给你一个无重复元素的整数数组 candidates 和一个目标整数 target，找出 candidates 中可以使数字和为目标数 target 的所有不同组合，并以列表形式返回。你可以按任意顺序返回这些组合。candidates 中的同一个数字可以无限制重复被选取。",
+      "examples": [
+        {
+          "input": "candidates = [2,3,6,7], target = 7",
+          "output": "[[2,2,3],[7]]",
+          "explanation": "2+2+3=7 和 7=7 是两种组合"
+        },
+        {
+          "input": "candidates = [2,3,5], target = 8",
+          "output": "[[2,2,2,2],[2,3,3],[3,5]]",
+          "explanation": "三种组合的和为8"
+        }
+      ],
+      "constraints": [
+        "1 <= candidates.length <= 30",
+        "2 <= candidates[i] <= 40",
+        "candidates 的所有元素互不相同",
+        "1 <= target <= 40"
+      ],
+      "function_signature": "def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:",
+      "test_cases": [
+        {"input": {"candidates": [2, 3, 6, 7], "target": 7}, "expected": [[2, 2, 3], [7]]},
+        {"input": {"candidates": [2, 3, 5], "target": 8}, "expected": [[2, 2, 2, 2], [2, 3, 3], [3, 5]]},
+        {"input": {"candidates": [2], "target": 1}, "expected": []}
+      ]
+    },
+    {
+      "id": 62,
+      "leetcode_id": 22,
+      "title": "括号生成",
+      "title_en": "Generate Parentheses",
+      "difficulty": "Medium",
+      "tags": ["字符串", "动态规划", "回溯"],
+      "url": "https://leetcode.cn/problems/generate-parentheses/",
+      "category": "回溯",
+      "codetop_frequency": 145,
+      "description": "数字 n 代表生成括号的对数，请你设计一个函数，用于能够生成所有可能的并且有效的括号组合。",
+      "examples": [
+        {
+          "input": "n = 3",
+          "output": "[\"((()))\",\"(()())\",\"(())()\",\"()(())\",\"()()()\"]",
+          "explanation": "3对括号的所有有效组合"
+        },
+        {
+          "input": "n = 1",
+          "output": "[\"()\"]",
+          "explanation": "1对括号只有一种组合"
+        }
+      ],
+      "constraints": [
+        "1 <= n <= 8"
+      ],
+      "function_signature": "def generateParenthesis(self, n: int) -> List[str]:",
+      "test_cases": [
+        {"input": {"n": 3}, "expected": ["((()))", "(()())", "(())()", "()(())", "()()()"]},
+        {"input": {"n": 1}, "expected": ["()"]},
+        {"input": {"n": 2}, "expected": ["(())", "()()"]}
+      ]
+    },
+    {
+      "id": 63,
+      "leetcode_id": 79,
+      "title": "单词搜索",
+      "title_en": "Word Search",
+      "difficulty": "Medium",
+      "tags": ["数组", "回溯", "矩阵"],
+      "url": "https://leetcode.cn/problems/word-search/",
+      "category": "回溯",
+      "codetop_frequency": 85,
+      "description": "给定一个 m x n 二维字符网格 board 和一个字符串单词 word。如果 word 存在于网格中，返回 true；否则返回 false。单词必须按照字母顺序，通过相邻的单元格内的字母构成，其中相邻单元格是那些水平相邻或垂直相邻的单元格。同一个单元格内的字母不允许被重复使用。",
+      "examples": [
+        {
+          "input": "board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCCED\"",
+          "output": "true",
+          "explanation": "可以找到路径 A->B->C->C->E->D"
+        },
+        {
+          "input": "board = [[\"A\",\"B\",\"C\",\"E\"],[\"S\",\"F\",\"C\",\"S\"],[\"A\",\"D\",\"E\",\"E\"]], word = \"ABCB\"",
+          "output": "false",
+          "explanation": "无法在不重复使用单元格的情况下找到路径"
+        }
+      ],
+      "constraints": [
+        "m == board.length",
+        "n == board[i].length",
+        "1 <= m, n <= 6",
+        "1 <= word.length <= 15",
+        "board 和 word 仅由大小写英文字母组成"
+      ],
+      "function_signature": "def exist(self, board: List[List[str]], word: str) -> bool:",
+      "test_cases": [
+        {"input": {"board": [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "word": "ABCCED"}, "expected": true},
+        {"input": {"board": [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "word": "SEE"}, "expected": true},
+        {"input": {"board": [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]], "word": "ABCB"}, "expected": false}
+      ]
+    },
+    {
+      "id": 64,
+      "leetcode_id": 131,
+      "title": "分割回文串",
+      "title_en": "Palindrome Partitioning",
+      "difficulty": "Medium",
+      "tags": ["字符串", "动态规划", "回溯"],
+      "url": "https://leetcode.cn/problems/palindrome-partitioning/",
+      "category": "回溯",
+      "codetop_frequency": 70,
+      "description": "给你一个字符串 s，请你将 s 分割成一些子串，使每个子串都是回文串。返回 s 所有可能的分割方案。",
+      "examples": [
+        {
+          "input": "s = \"aab\"",
+          "output": "[[\"a\",\"a\",\"b\"],[\"aa\",\"b\"]]",
+          "explanation": "两种分割方案使每个子串都是回文串"
+        },
+        {
+          "input": "s = \"a\"",
+          "output": "[[\"a\"]]",
+          "explanation": "单个字符本身就是回文串"
+        }
+      ],
+      "constraints": [
+        "1 <= s.length <= 16",
+        "s 仅由小写英文字母组成"
+      ],
+      "function_signature": "def partition(self, s: str) -> List[List[str]]:",
+      "test_cases": [
+        {"input": {"s": "aab"}, "expected": [["a", "a", "b"], ["aa", "b"]]},
+        {"input": {"s": "a"}, "expected": [["a"]]},
+        {"input": {"s": "aba"}, "expected": [["a", "b", "a"], ["aba"]]}
+      ]
+    },
+    {
+      "id": 65,
+      "leetcode_id": 51,
+      "title": "N 皇后",
+      "title_en": "N-Queens",
+      "difficulty": "Hard",
+      "tags": ["数组", "回溯"],
+      "url": "https://leetcode.cn/problems/n-queens/",
+      "category": "回溯",
+      "codetop_frequency": 80,
+      "description": "按照国际象棋的规则，皇后可以攻击与之处在同一行或同一列或同一斜线上的棋子。n 皇后问题研究的是如何将 n 个皇后放置在 n x n 的棋盘上，并且使皇后彼此之间不能相互攻击。给你一个整数 n，返回所有不同的 n 皇后问题的解决方案。",
+      "examples": [
+        {
+          "input": "n = 4",
+          "output": "[[\".Q..\",\"...Q\",\"Q...\",\"..Q.\"],[\"..Q.\",\"Q...\",\"...Q\",\".Q..\"]]",
+          "explanation": "4皇后问题有两种解法"
+        },
+        {
+          "input": "n = 1",
+          "output": "[[\"Q\"]]",
+          "explanation": "1皇后只有一种放法"
+        }
+      ],
+      "constraints": [
+        "1 <= n <= 9"
+      ],
+      "function_signature": "def solveNQueens(self, n: int) -> List[List[str]]:",
+      "test_cases": [
+        {"input": {"n": 4}, "expected": [[".Q..", "...Q", "Q...", "..Q."], ["..Q.", "Q...", "...Q", ".Q.."]]},
+        {"input": {"n": 1}, "expected": [["Q"]]},
+        {"input": {"n": 2}, "expected": []}
+      ]
+    },
+    {
+      "id": 66,
+      "leetcode_id": 35,
+      "title": "搜索插入位置",
+      "title_en": "Search Insert Position",
+      "difficulty": "Easy",
+      "tags": ["数组", "二分查找"],
+      "url": "https://leetcode.cn/problems/search-insert-position/",
+      "category": "二分查找",
+      "codetop_frequency": 90,
+      "description": "给定一个排序数组和一个目标值，在数组中找到目标值，并返回其索引。如果目标值不存在于数组中，返回它将会被按顺序插入的位置。请必须使用时间复杂度为 O(log n) 的算法。",
+      "examples": [
+        {
+          "input": "nums = [1,3,5,6], target = 5",
+          "output": "2",
+          "explanation": "目标值5在索引2处"
+        },
+        {
+          "input": "nums = [1,3,5,6], target = 2",
+          "output": "1",
+          "explanation": "目标值2应插入到索引1处"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^4",
+        "-10^4 <= nums[i] <= 10^4",
+        "nums 为无重复元素的升序排列数组",
+        "-10^4 <= target <= 10^4"
+      ],
+      "function_signature": "def searchInsert(self, nums: List[int], target: int) -> int:",
+      "test_cases": [
+        {"input": {"nums": [1, 3, 5, 6], "target": 5}, "expected": 2},
+        {"input": {"nums": [1, 3, 5, 6], "target": 2}, "expected": 1},
+        {"input": {"nums": [1, 3, 5, 6], "target": 7}, "expected": 4}
+      ]
+    },
+    {
+      "id": 67,
+      "leetcode_id": 74,
+      "title": "搜索二维矩阵",
+      "title_en": "Search a 2D Matrix",
+      "difficulty": "Medium",
+      "tags": ["数组", "二分查找", "矩阵"],
+      "url": "https://leetcode.cn/problems/search-a-2d-matrix/",
+      "category": "二分查找",
+      "codetop_frequency": 85,
+      "description": "给你一个满足下述两条属性的 m x n 整数矩阵：每行中的整数从左到右按非递减顺序排列，每行的第一个整数大于前一行的最后一个整数。给你一个整数 target，如果 target 在矩阵中，返回 true；否则返回 false。",
+      "examples": [
+        {
+          "input": "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3",
+          "output": "true",
+          "explanation": "矩阵中存在目标值3"
+        },
+        {
+          "input": "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13",
+          "output": "false",
+          "explanation": "矩阵中不存在目标值13"
+        }
+      ],
+      "constraints": [
+        "m == matrix.length",
+        "n == matrix[i].length",
+        "1 <= m, n <= 100",
+        "-10^4 <= matrix[i][j], target <= 10^4"
+      ],
+      "function_signature": "def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:",
+      "test_cases": [
+        {"input": {"matrix": [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], "target": 3}, "expected": true},
+        {"input": {"matrix": [[1, 3, 5, 7], [10, 11, 16, 20], [23, 30, 34, 60]], "target": 13}, "expected": false},
+        {"input": {"matrix": [[1]], "target": 1}, "expected": true}
+      ]
+    },
+    {
+      "id": 68,
+      "leetcode_id": 34,
+      "title": "在排序数组中查找元素的第一个和最后一个位置",
+      "title_en": "Find First and Last Position of Element in Sorted Array",
+      "difficulty": "Medium",
+      "tags": ["数组", "二分查找"],
+      "url": "https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/",
+      "category": "二分查找",
+      "codetop_frequency": 140,
+      "description": "给你一个按照非递减顺序排列的整数数组 nums，和一个目标值 target。请你找出给定目标值在数组中的开始位置和结束位置。如果数组中不存在目标值 target，返回 [-1, -1]。你必须设计并实现时间复杂度为 O(log n) 的算法解决此问题。",
+      "examples": [
+        {
+          "input": "nums = [5,7,7,8,8,10], target = 8",
+          "output": "[3,4]",
+          "explanation": "目标值8出现在索引3和4处"
+        },
+        {
+          "input": "nums = [5,7,7,8,8,10], target = 6",
+          "output": "[-1,-1]",
+          "explanation": "目标值6不在数组中"
+        }
+      ],
+      "constraints": [
+        "0 <= nums.length <= 10^5",
+        "-10^9 <= nums[i] <= 10^9",
+        "nums 是一个非递减数组",
+        "-10^9 <= target <= 10^9"
+      ],
+      "function_signature": "def searchRange(self, nums: List[int], target: int) -> List[int]:",
+      "test_cases": [
+        {"input": {"nums": [5, 7, 7, 8, 8, 10], "target": 8}, "expected": [3, 4]},
+        {"input": {"nums": [5, 7, 7, 8, 8, 10], "target": 6}, "expected": [-1, -1]},
+        {"input": {"nums": [], "target": 0}, "expected": [-1, -1]}
+      ]
+    },
+    {
+      "id": 69,
+      "leetcode_id": 33,
+      "title": "搜索旋转排序数组",
+      "title_en": "Search in Rotated Sorted Array",
+      "difficulty": "Medium",
+      "tags": ["数组", "二分查找"],
+      "url": "https://leetcode.cn/problems/search-in-rotated-sorted-array/",
+      "category": "二分查找",
+      "codetop_frequency": 200,
+      "description": "整数数组 nums 按升序排列，数组中的值互不相同。在传递给函数之前，nums 在预先未知的某个下标 k 上进行了旋转。给你旋转后的数组 nums 和一个整数 target，如果 nums 中存在这个目标值，则返回它的下标，否则返回 -1。你必须设计一个时间复杂度为 O(log n) 的算法解决此问题。",
+      "examples": [
+        {
+          "input": "nums = [4,5,6,7,0,1,2], target = 0",
+          "output": "4",
+          "explanation": "目标值0在索引4处"
+        },
+        {
+          "input": "nums = [4,5,6,7,0,1,2], target = 3",
+          "output": "-1",
+          "explanation": "目标值3不在数组中"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 5000",
+        "-10^4 <= nums[i] <= 10^4",
+        "nums 中的每个值都独一无二",
+        "nums 肯定会在某个点上进行旋转",
+        "-10^4 <= target <= 10^4"
+      ],
+      "function_signature": "def search(self, nums: List[int], target: int) -> int:",
+      "test_cases": [
+        {"input": {"nums": [4, 5, 6, 7, 0, 1, 2], "target": 0}, "expected": 4},
+        {"input": {"nums": [4, 5, 6, 7, 0, 1, 2], "target": 3}, "expected": -1},
+        {"input": {"nums": [1], "target": 0}, "expected": -1}
+      ]
+    },
+    {
+      "id": 70,
+      "leetcode_id": 153,
+      "title": "寻找旋转排序数组中的最小值",
+      "title_en": "Find Minimum in Rotated Sorted Array",
+      "difficulty": "Medium",
+      "tags": ["数组", "二分查找"],
+      "url": "https://leetcode.cn/problems/find-minimum-in-rotated-sorted-array/",
+      "category": "二分查找",
+      "codetop_frequency": 95,
+      "description": "已知一个长度为 n 的数组，预先按照升序排列，经由 1 到 n 次旋转后，得到输入数组。给你一个元素值互不相同的数组 nums，它原来是一个升序排列的数组，并按上述情形进行了多次旋转。请你找出并返回数组中的最小元素。你必须设计一个时间复杂度为 O(log n) 的算法解决此问题。",
+      "examples": [
+        {
+          "input": "nums = [3,4,5,1,2]",
+          "output": "1",
+          "explanation": "原数组为 [1,2,3,4,5] ，旋转 3 次得到输入数组"
+        },
+        {
+          "input": "nums = [4,5,6,7,0,1,2]",
+          "output": "0",
+          "explanation": "原数组为 [0,1,2,4,5,6,7] ，旋转 4 次得到输入数组"
+        }
+      ],
+      "constraints": [
+        "n == nums.length",
+        "1 <= n <= 5000",
+        "-5000 <= nums[i] <= 5000",
+        "nums 中的所有整数互不相同",
+        "nums 原来是一个升序排序的数组，并进行了 1 至 n 次旋转"
+      ],
+      "function_signature": "def findMin(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [3, 4, 5, 1, 2]}, "expected": 1},
+        {"input": {"nums": [4, 5, 6, 7, 0, 1, 2]}, "expected": 0},
+        {"input": {"nums": [11, 13, 15, 17]}, "expected": 11}
+      ]
+    },
+    {
+      "id": 71,
+      "leetcode_id": 4,
+      "title": "寻找两个正序数组的中位数",
+      "title_en": "Median of Two Sorted Arrays",
+      "difficulty": "Hard",
+      "tags": ["数组", "二分查找", "分治"],
+      "url": "https://leetcode.cn/problems/median-of-two-sorted-arrays/",
+      "category": "二分查找",
+      "codetop_frequency": 180,
+      "description": "给定两个大小分别为 m 和 n 的正序（从小到大）数组 nums1 和 nums2。请你找出并返回这两个正序数组的中位数。算法的时间复杂度应该为 O(log (m+n))。",
+      "examples": [
+        {
+          "input": "nums1 = [1,3], nums2 = [2]",
+          "output": "2.00000",
+          "explanation": "合并数组 = [1,2,3] ，中位数 2"
+        },
+        {
+          "input": "nums1 = [1,2], nums2 = [3,4]",
+          "output": "2.50000",
+          "explanation": "合并数组 = [1,2,3,4] ，中位数 (2 + 3) / 2 = 2.5"
+        }
+      ],
+      "constraints": [
+        "nums1.length == m",
+        "nums2.length == n",
+        "0 <= m <= 1000",
+        "0 <= n <= 1000",
+        "1 <= m + n <= 2000",
+        "-10^6 <= nums1[i], nums2[i] <= 10^6"
+      ],
+      "function_signature": "def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:",
+      "test_cases": [
+        {"input": {"nums1": [1, 3], "nums2": [2]}, "expected": 2.0},
+        {"input": {"nums1": [1, 2], "nums2": [3, 4]}, "expected": 2.5},
+        {"input": {"nums1": [0, 0], "nums2": [0, 0]}, "expected": 0.0}
+      ]
+    },
+    {
+      "id": 72,
+      "leetcode_id": 20,
+      "title": "有效的括号",
+      "title_en": "Valid Parentheses",
+      "difficulty": "Easy",
+      "tags": ["栈", "字符串"],
+      "url": "https://leetcode.cn/problems/valid-parentheses/",
+      "category": "栈",
+      "codetop_frequency": 260,
+      "description": "给定一个只包括 '('，')'，'{'，'}'，'['，']' 的字符串 s，判断字符串是否有效。有效字符串需满足：左括号必须用相同类型的右括号闭合，左括号必须以正确的顺序闭合，每个右括号都有一个对应的相同类型的左括号。",
+      "examples": [
+        {
+          "input": "s = \"()\"",
+          "output": "true",
+          "explanation": "括号正确匹配"
+        },
+        {
+          "input": "s = \"()[]{}\"",
+          "output": "true",
+          "explanation": "所有括号正确匹配"
+        },
+        {
+          "input": "s = \"(]\"",
+          "output": "false",
+          "explanation": "括号类型不匹配"
+        }
+      ],
+      "constraints": [
+        "1 <= s.length <= 10^4",
+        "s 仅由括号 '()[]{}' 组成"
+      ],
+      "function_signature": "def isValid(self, s: str) -> bool:",
+      "test_cases": [
+        {"input": {"s": "()"}, "expected": true},
+        {"input": {"s": "()[]{}"}, "expected": true},
+        {"input": {"s": "(]"}, "expected": false}
+      ]
+    },
+    {
+      "id": 73,
+      "leetcode_id": 155,
+      "title": "最小栈",
+      "title_en": "Min Stack",
+      "difficulty": "Medium",
+      "tags": ["栈", "设计"],
+      "url": "https://leetcode.cn/problems/min-stack/",
+      "category": "栈",
+      "codetop_frequency": 110,
+      "description": "设计一个支持 push、pop、top 操作，并能在常数时间内检索到最小元素的栈。实现 MinStack 类：MinStack() 初始化堆栈对象，void push(int val) 将元素val推入堆栈，void pop() 删除堆栈顶部的元素，int top() 获取堆栈顶部的元素，int getMin() 获取堆栈中的最小元素。",
+      "examples": [
+        {
+          "input": "[\"MinStack\",\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"]\n[[],[-2],[0],[-3],[],[],[],[]]",
+          "output": "[null,null,null,null,-3,null,0,-2]",
+          "explanation": "按顺序执行操作"
+        }
+      ],
+      "constraints": [
+        "-2^31 <= val <= 2^31 - 1",
+        "pop、top 和 getMin 操作总是在非空栈上调用",
+        "push、pop、top 和 getMin 最多被调用 3 * 10^4 次"
+      ],
+      "function_signature": "def __init__(self):\ndef push(self, val: int) -> None:\ndef pop(self) -> None:\ndef top(self) -> int:\ndef getMin(self) -> int:",
+      "test_cases": [
+        {"input": {"operations": ["MinStack", "push", "push", "push", "getMin", "pop", "top", "getMin"], "arguments": [[], [-2], [0], [-3], [], [], [], []]}, "expected": [null, null, null, null, -3, null, 0, -2]},
+        {"input": {"operations": ["MinStack", "push", "push", "getMin"], "arguments": [[], [1], [2], []]}, "expected": [null, null, null, 1]},
+        {"input": {"operations": ["MinStack", "push", "getMin", "pop"], "arguments": [[], [0], [], []]}, "expected": [null, null, 0, null]}
+      ]
+    },
+    {
+      "id": 74,
+      "leetcode_id": 394,
+      "title": "字符串解码",
+      "title_en": "Decode String",
+      "difficulty": "Medium",
+      "tags": ["栈", "递归", "字符串"],
+      "url": "https://leetcode.cn/problems/decode-string/",
+      "category": "栈",
+      "codetop_frequency": 120,
+      "description": "给定一个经过编码的字符串，返回它解码后的字符串。编码规则为: k[encoded_string]，表示其中方括号内部的 encoded_string 正好重复 k 次。注意 k 保证为正整数。你可以认为输入字符串总是有效的。",
+      "examples": [
+        {
+          "input": "s = \"3[a]2[bc]\"",
+          "output": "\"aaabcbc\"",
+          "explanation": "3个a加上2个bc"
+        },
+        {
+          "input": "s = \"3[a2[c]]\"",
+          "output": "\"accaccacc\"",
+          "explanation": "先解码内层2[c]=cc，再解码外层3[acc]=accaccacc"
+        }
+      ],
+      "constraints": [
+        "1 <= s.length <= 30",
+        "s 由小写英文字母、数字和方括号 '[]' 组成",
+        "s 保证是一个有效的输入",
+        "s 中所有整数的取值范围为 [1, 300]"
+      ],
+      "function_signature": "def decodeString(self, s: str) -> str:",
+      "test_cases": [
+        {"input": {"s": "3[a]2[bc]"}, "expected": "aaabcbc"},
+        {"input": {"s": "3[a2[c]]"}, "expected": "accaccacc"},
+        {"input": {"s": "2[abc]3[cd]ef"}, "expected": "abcabccdcdcdef"}
+      ]
+    },
+    {
+      "id": 75,
+      "leetcode_id": 739,
+      "title": "每日温度",
+      "title_en": "Daily Temperatures",
+      "difficulty": "Medium",
+      "tags": ["栈", "数组", "单调栈"],
+      "url": "https://leetcode.cn/problems/daily-temperatures/",
+      "category": "栈",
+      "codetop_frequency": 100,
+      "description": "给定一个整数数组 temperatures，表示每天的温度，返回一个数组 answer，其中 answer[i] 是指对于第 i 天，下一个更高温度出现在几天后。如果气温在这之后都不会升高，请在该位置用 0 来代替。",
+      "examples": [
+        {
+          "input": "temperatures = [73,74,75,71,69,72,76,73]",
+          "output": "[1,1,4,2,1,1,0,0]",
+          "explanation": "第1天温度73，第2天74更高，等待1天"
+        },
+        {
+          "input": "temperatures = [30,40,50,60]",
+          "output": "[1,1,1,0]",
+          "explanation": "每天温度都比前一天高"
+        }
+      ],
+      "constraints": [
+        "1 <= temperatures.length <= 10^5",
+        "30 <= temperatures[i] <= 100"
+      ],
+      "function_signature": "def dailyTemperatures(self, temperatures: List[int]) -> List[int]:",
+      "test_cases": [
+        {"input": {"temperatures": [73, 74, 75, 71, 69, 72, 76, 73]}, "expected": [1, 1, 4, 2, 1, 1, 0, 0]},
+        {"input": {"temperatures": [30, 40, 50, 60]}, "expected": [1, 1, 1, 0]},
+        {"input": {"temperatures": [30, 60, 90]}, "expected": [1, 1, 0]}
+      ]
+    },
+    {
+      "id": 76,
+      "leetcode_id": 84,
+      "title": "柱状图中最大的矩形",
+      "title_en": "Largest Rectangle in Histogram",
+      "difficulty": "Hard",
+      "tags": ["栈", "数组", "单调栈"],
+      "url": "https://leetcode.cn/problems/largest-rectangle-in-histogram/",
+      "category": "栈",
+      "codetop_frequency": 135,
+      "description": "给定 n 个非负整数，用来表示柱状图中各个柱子的高度。每个柱子彼此相邻，且宽度为 1。求在该柱状图中，能够勾勒出来的矩形的最大面积。",
+      "examples": [
+        {
+          "input": "heights = [2,1,5,6,2,3]",
+          "output": "10",
+          "explanation": "最大的矩形为高度5宽度2的区域，面积为10"
+        },
+        {
+          "input": "heights = [2,4]",
+          "output": "4",
+          "explanation": "最大矩形面积为4"
+        }
+      ],
+      "constraints": [
+        "1 <= heights.length <= 10^5",
+        "0 <= heights[i] <= 10^4"
+      ],
+      "function_signature": "def largestRectangleArea(self, heights: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"heights": [2, 1, 5, 6, 2, 3]}, "expected": 10},
+        {"input": {"heights": [2, 4]}, "expected": 4},
+        {"input": {"heights": [1]}, "expected": 1}
+      ]
+    },
+    {
+      "id": 77,
+      "leetcode_id": 215,
+      "title": "数组中的第K个最大元素",
+      "title_en": "Kth Largest Element in an Array",
+      "difficulty": "Medium",
+      "tags": ["数组", "分治", "快速选择", "排序", "堆"],
+      "url": "https://leetcode.cn/problems/kth-largest-element-in-an-array/",
+      "category": "堆",
+      "codetop_frequency": 250,
+      "description": "给定整数数组 nums 和整数 k，请返回数组中第 k 个最大的元素。请注意，你需要找的是数组排序后的第 k 个最大的元素，而不是第 k 个不同的元素。你必须设计并实现时间复杂度为 O(n) 的算法解决此问题。",
+      "examples": [
+        {
+          "input": "nums = [3,2,1,5,6,4], k = 2",
+          "output": "5",
+          "explanation": "排序后为 [1,2,3,4,5,6]，第2大的是5"
+        },
+        {
+          "input": "nums = [3,2,3,1,2,4,5,5,6], k = 4",
+          "output": "4",
+          "explanation": "排序后为 [1,2,2,3,3,4,5,5,6]，第4大的是4"
+        }
+      ],
+      "constraints": [
+        "1 <= k <= nums.length <= 10^5",
+        "-10^4 <= nums[i] <= 10^4"
+      ],
+      "function_signature": "def findKthLargest(self, nums: List[int], k: int) -> int:",
+      "test_cases": [
+        {"input": {"nums": [3, 2, 1, 5, 6, 4], "k": 2}, "expected": 5},
+        {"input": {"nums": [3, 2, 3, 1, 2, 4, 5, 5, 6], "k": 4}, "expected": 4},
+        {"input": {"nums": [1], "k": 1}, "expected": 1}
+      ]
+    },
+    {
+      "id": 78,
+      "leetcode_id": 347,
+      "title": "前 K 个高频元素",
+      "title_en": "Top K Frequent Elements",
+      "difficulty": "Medium",
+      "tags": ["数组", "哈希表", "分治", "桶排序", "计数", "快速选择", "排序", "堆"],
+      "url": "https://leetcode.cn/problems/top-k-frequent-elements/",
+      "category": "堆",
+      "codetop_frequency": 140,
+      "description": "给你一个整数数组 nums 和一个整数 k，请你返回其中出现频率前 k 高的元素。你可以按任意顺序返回答案。",
+      "examples": [
+        {
+          "input": "nums = [1,1,1,2,2,3], k = 2",
+          "output": "[1,2]",
+          "explanation": "1出现3次，2出现2次，前2高频元素为[1,2]"
+        },
+        {
+          "input": "nums = [1], k = 1",
+          "output": "[1]",
+          "explanation": "只有一个元素"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^5",
+        "-10^4 <= nums[i] <= 10^4",
+        "k 的取值范围是 [1, 数组中不相同的元素的个数]",
+        "题目数据保证答案唯一"
+      ],
+      "function_signature": "def topKFrequent(self, nums: List[int], k: int) -> List[int]:",
+      "test_cases": [
+        {"input": {"nums": [1, 1, 1, 2, 2, 3], "k": 2}, "expected": [1, 2]},
+        {"input": {"nums": [1], "k": 1}, "expected": [1]},
+        {"input": {"nums": [4, 1, -1, 2, -1, 2, 3], "k": 2}, "expected": [-1, 2]}
+      ]
+    },
+    {
+      "id": 79,
+      "leetcode_id": 295,
+      "title": "数据流的中位数",
+      "title_en": "Find Median from Data Stream",
+      "difficulty": "Hard",
+      "tags": ["设计", "双指针", "数据流", "排序", "堆"],
+      "url": "https://leetcode.cn/problems/find-median-from-data-stream/",
+      "category": "堆",
+      "codetop_frequency": 115,
+      "description": "中位数是有序整数列表中间的数。如果列表的大小是偶数，则没有中间值，中位数是两个中间值的平均值。实现 MedianFinder 类：MedianFinder() 初始化 MedianFinder 对象，void addNum(int num) 将数据流中的整数 num 添加到数据结构中，double findMedian() 返回到目前为止所有元素的中位数。",
+      "examples": [
+        {
+          "input": "[\"MedianFinder\",\"addNum\",\"addNum\",\"findMedian\",\"addNum\",\"findMedian\"]\n[[],[1],[2],[],[3],[]]",
+          "output": "[null,null,null,1.5,null,2.0]",
+          "explanation": "添加1和2后中位数为1.5，再添加3后中位数为2.0"
+        }
+      ],
+      "constraints": [
+        "-10^5 <= num <= 10^5",
+        "在调用 findMedian 之前，数据结构中至少有一个元素",
+        "最多调用 5 * 10^4 次 addNum 和 findMedian"
+      ],
+      "function_signature": "def __init__(self):\ndef addNum(self, num: int) -> None:\ndef findMedian(self) -> float:",
+      "test_cases": [
+        {"input": {"operations": ["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"], "arguments": [[], [1], [2], [], [3], []]}, "expected": [null, null, null, 1.5, null, 2.0]},
+        {"input": {"operations": ["MedianFinder", "addNum", "findMedian"], "arguments": [[], [5], []]}, "expected": [null, null, 5.0]},
+        {"input": {"operations": ["MedianFinder", "addNum", "addNum", "addNum", "findMedian"], "arguments": [[], [1], [2], [3], []]}, "expected": [null, null, null, null, 2.0]}
+      ]
+    },
+    {
+      "id": 80,
+      "leetcode_id": 121,
+      "title": "买卖股票的最佳时机",
+      "title_en": "Best Time to Buy and Sell Stock",
+      "difficulty": "Easy",
+      "tags": ["数组", "动态规划"],
+      "url": "https://leetcode.cn/problems/best-time-to-buy-and-sell-stock/",
+      "category": "贪心算法",
+      "codetop_frequency": 230,
+      "description": "给定一个数组 prices，它的第 i 个元素 prices[i] 表示一支给定股票第 i 天的价格。你只能选择某一天买入这只股票，并选择在未来的某一个不同的日子卖出该股票。设计一个算法来计算你所能获取的最大利润。返回你可以从这笔交易中获取的最大利润。如果你不能获取任何利润，返回 0。",
+      "examples": [
+        {
+          "input": "prices = [7,1,5,3,6,4]",
+          "output": "5",
+          "explanation": "在第 2 天（股票价格 = 1）的时候买入，在第 5 天（股票价格 = 6）的时候卖出，最大利润 = 6-1 = 5"
+        },
+        {
+          "input": "prices = [7,6,4,3,1]",
+          "output": "0",
+          "explanation": "在这种情况下, 没有交易完成, 所以最大利润为 0"
+        }
+      ],
+      "constraints": [
+        "1 <= prices.length <= 10^5",
+        "0 <= prices[i] <= 10^4"
+      ],
+      "function_signature": "def maxProfit(self, prices: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"prices": [7, 1, 5, 3, 6, 4]}, "expected": 5},
+        {"input": {"prices": [7, 6, 4, 3, 1]}, "expected": 0},
+        {"input": {"prices": [2, 4, 1]}, "expected": 2}
+      ]
+    },
+    {
+      "id": 81,
+      "leetcode_id": 55,
+      "title": "跳跃游戏",
+      "title_en": "Jump Game",
+      "difficulty": "Medium",
+      "tags": ["贪心", "数组", "动态规划"],
+      "url": "https://leetcode.cn/problems/jump-game/",
+      "category": "贪心算法",
+      "codetop_frequency": 105,
+      "description": "给你一个非负整数数组 nums，你最初位于数组的第一个下标。数组中的每个元素代表你在该位置可以跳跃的最大长度。判断你是否能够到达最后一个下标。",
+      "examples": [
+        {
+          "input": "nums = [2,3,1,1,4]",
+          "output": "true",
+          "explanation": "可以先跳 1 步，从下标 0 到达下标 1, 然后再从下标 1 跳 3 步到达最后一个下标"
+        },
+        {
+          "input": "nums = [3,2,1,0,4]",
+          "output": "false",
+          "explanation": "无论怎样，总会到达下标为 3 的位置。但该下标的最大跳跃长度是 0，所以永远不可能到达最后一个下标"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^4",
+        "0 <= nums[i] <= 10^5"
+      ],
+      "function_signature": "def canJump(self, nums: List[int]) -> bool:",
+      "test_cases": [
+        {"input": {"nums": [2, 3, 1, 1, 4]}, "expected": true},
+        {"input": {"nums": [3, 2, 1, 0, 4]}, "expected": false},
+        {"input": {"nums": [0]}, "expected": true}
+      ]
+    },
+    {
+      "id": 82,
+      "leetcode_id": 45,
+      "title": "跳跃游戏 II",
+      "title_en": "Jump Game II",
+      "difficulty": "Medium",
+      "tags": ["贪心", "数组", "动态规划"],
+      "url": "https://leetcode.cn/problems/jump-game-ii/",
+      "category": "贪心算法",
+      "codetop_frequency": 95,
+      "description": "给定一个长度为 n 的 0 索引整数数组 nums。初始位置为 nums[0]。每个元素 nums[i] 表示从索引 i 向前跳转的最大长度。返回到达 nums[n - 1] 的最小跳跃次数。生成的测试用例可以到达 nums[n - 1]。",
+      "examples": [
+        {
+          "input": "nums = [2,3,1,1,4]",
+          "output": "2",
+          "explanation": "跳到下标 1，然后跳 3 步到达最后一个位置，共 2 次跳跃"
+        },
+        {
+          "input": "nums = [2,3,0,1,4]",
+          "output": "2",
+          "explanation": "最少需要2次跳跃"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 10^4",
+        "0 <= nums[i] <= 1000",
+        "题目保证可以到达 nums[n-1]"
+      ],
+      "function_signature": "def jump(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [2, 3, 1, 1, 4]}, "expected": 2},
+        {"input": {"nums": [2, 3, 0, 1, 4]}, "expected": 2},
+        {"input": {"nums": [1]}, "expected": 0}
+      ]
+    },
+    {
+      "id": 83,
+      "leetcode_id": 763,
+      "title": "划分字母区间",
+      "title_en": "Partition Labels",
+      "difficulty": "Medium",
+      "tags": ["贪心", "哈希表", "双指针", "字符串"],
+      "url": "https://leetcode.cn/problems/partition-labels/",
+      "category": "贪心算法",
+      "codetop_frequency": 70,
+      "description": "给你一个字符串 s。我们要把这个字符串划分为尽可能多的片段，同一字母最多出现在一个片段中。注意，划分结果需要满足：将所有划分结果按顺序连接，得到的字符串仍然是 s。返回一个表示每个字符串片段的长度的列表。",
+      "examples": [
+        {
+          "input": "s = \"ababcbacadefegdehijhklij\"",
+          "output": "[9,7,8]",
+          "explanation": "划分结果为 \"ababcbaca\"、\"defegde\"、\"hijhklij\"，每个字母最多出现在一个片段中"
+        },
+        {
+          "input": "s = \"eccbbbbdec\"",
+          "output": "[10]",
+          "explanation": "整个字符串为一个片段"
+        }
+      ],
+      "constraints": [
+        "1 <= s.length <= 500",
+        "s 仅由小写英文字母组成"
+      ],
+      "function_signature": "def partitionLabels(self, s: str) -> List[int]:",
+      "test_cases": [
+        {"input": {"s": "ababcbacadefegdehijhklij"}, "expected": [9, 7, 8]},
+        {"input": {"s": "eccbbbbdec"}, "expected": [10]},
+        {"input": {"s": "abc"}, "expected": [1, 1, 1]}
+      ]
+    },
+    {
+      "id": 84,
+      "leetcode_id": 70,
+      "title": "爬楼梯",
+      "title_en": "Climbing Stairs",
+      "difficulty": "Easy",
+      "tags": ["记忆化搜索", "数学", "动态规划"],
+      "url": "https://leetcode.cn/problems/climbing-stairs/",
+      "category": "动态规划",
+      "codetop_frequency": 185,
+      "description": "假设你正在爬楼梯。需要 n 阶你才能到达楼顶。每次你可以爬 1 或 2 个台阶。你有多少种不同的方法可以爬到楼顶呢？",
+      "examples": [
+        {
+          "input": "n = 2",
+          "output": "2",
+          "explanation": "有两种方法可以爬到楼顶。1. 1 阶 + 1 阶  2. 2 阶"
+        },
+        {
+          "input": "n = 3",
+          "output": "3",
+          "explanation": "有三种方法可以爬到楼顶。1. 1+1+1  2. 1+2  3. 2+1"
+        }
+      ],
+      "constraints": [
+        "1 <= n <= 45"
+      ],
+      "function_signature": "def climbStairs(self, n: int) -> int:",
+      "test_cases": [
+        {"input": {"n": 2}, "expected": 2},
+        {"input": {"n": 3}, "expected": 3},
+        {"input": {"n": 5}, "expected": 8}
+      ]
+    },
+    {
+      "id": 85,
+      "leetcode_id": 118,
+      "title": "杨辉三角",
+      "title_en": "Pascal's Triangle",
+      "difficulty": "Easy",
+      "tags": ["数组", "动态规划"],
+      "url": "https://leetcode.cn/problems/pascals-triangle/",
+      "category": "动态规划",
+      "codetop_frequency": 65,
+      "description": "给定一个非负整数 numRows，生成「杨辉三角」的前 numRows 行。在「杨辉三角」中，每个数是它左上方和右上方的数的和。",
+      "examples": [
+        {
+          "input": "numRows = 5",
+          "output": "[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]",
+          "explanation": "生成前5行杨辉三角"
+        },
+        {
+          "input": "numRows = 1",
+          "output": "[[1]]",
+          "explanation": "只有一行"
+        }
+      ],
+      "constraints": [
+        "1 <= numRows <= 30"
+      ],
+      "function_signature": "def generate(self, numRows: int) -> List[List[int]]:",
+      "test_cases": [
+        {"input": {"numRows": 5}, "expected": [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]},
+        {"input": {"numRows": 1}, "expected": [[1]]},
+        {"input": {"numRows": 3}, "expected": [[1], [1, 1], [1, 2, 1]]}
+      ]
+    },
+    {
+      "id": 86,
+      "leetcode_id": 198,
+      "title": "打家劫舍",
+      "title_en": "House Robber",
+      "difficulty": "Medium",
+      "tags": ["数组", "动态规划"],
+      "url": "https://leetcode.cn/problems/house-robber/",
+      "category": "动态规划",
+      "codetop_frequency": 150,
+      "description": "你是一个专业的小偷，计划偷窃沿街的房屋。每间房内都藏有一定的现金，影响你偷窃的唯一制约因素就是相邻的房屋装有相互连通的防盗系统，如果两间相邻的房屋在同一晚上被小偷闯入，系统会自动报警。给定一个代表每个房屋存放金额的非负整数数组，计算你不触动警报装置的情况下，一夜之内能够偷窃到的最高金额。",
+      "examples": [
+        {
+          "input": "nums = [1,2,3,1]",
+          "output": "4",
+          "explanation": "偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。偷窃到的最高金额 = 1 + 3 = 4"
+        },
+        {
+          "input": "nums = [2,7,9,3,1]",
+          "output": "12",
+          "explanation": "偷窃 1 号房屋 (金额 = 2), 偷窃 3 号房屋 (金额 = 9)，接着偷窃 5 号房屋 (金额 = 1)。偷窃到的最高金额 = 2 + 9 + 1 = 12"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 100",
+        "0 <= nums[i] <= 400"
+      ],
+      "function_signature": "def rob(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [1, 2, 3, 1]}, "expected": 4},
+        {"input": {"nums": [2, 7, 9, 3, 1]}, "expected": 12},
+        {"input": {"nums": [0]}, "expected": 0}
+      ]
+    },
+    {
+      "id": 87,
+      "leetcode_id": 279,
+      "title": "完全平方数",
+      "title_en": "Perfect Squares",
+      "difficulty": "Medium",
+      "tags": ["广度优先搜索", "数学", "动态规划"],
+      "url": "https://leetcode.cn/problems/perfect-squares/",
+      "category": "动态规划",
+      "codetop_frequency": 80,
+      "description": "给你一个整数 n，返回和为 n 的完全平方数的最少数量。完全平方数是一个整数，其值等于另一个整数的平方；换句话说，其值等于一个整数自乘的积。例如，1、4、9 和 16 都是完全平方数，而 3 和 11 不是。",
+      "examples": [
+        {
+          "input": "n = 12",
+          "output": "3",
+          "explanation": "12 = 4 + 4 + 4"
+        },
+        {
+          "input": "n = 13",
+          "output": "2",
+          "explanation": "13 = 4 + 9"
+        }
+      ],
+      "constraints": [
+        "1 <= n <= 10^4"
+      ],
+      "function_signature": "def numSquares(self, n: int) -> int:",
+      "test_cases": [
+        {"input": {"n": 12}, "expected": 3},
+        {"input": {"n": 13}, "expected": 2},
+        {"input": {"n": 1}, "expected": 1}
+      ]
+    },
+    {
+      "id": 88,
+      "leetcode_id": 322,
+      "title": "零钱兑换",
+      "title_en": "Coin Change",
+      "difficulty": "Medium",
+      "tags": ["广度优先搜索", "数组", "动态规划"],
+      "url": "https://leetcode.cn/problems/coin-change/",
+      "category": "动态规划",
+      "codetop_frequency": 175,
+      "description": "给你一个整数数组 coins，表示不同面额的硬币；以及一个整数 amount，表示总金额。计算并返回可以凑成总金额所需的最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。你可以认为每种硬币的数量是无限的。",
+      "examples": [
+        {
+          "input": "coins = [1,2,5], amount = 11",
+          "output": "3",
+          "explanation": "11 = 5 + 5 + 1"
+        },
+        {
+          "input": "coins = [2], amount = 3",
+          "output": "-1",
+          "explanation": "无法凑成总金额3"
+        }
+      ],
+      "constraints": [
+        "1 <= coins.length <= 12",
+        "1 <= coins[i] <= 2^31 - 1",
+        "0 <= amount <= 10^4"
+      ],
+      "function_signature": "def coinChange(self, coins: List[int], amount: int) -> int:",
+      "test_cases": [
+        {"input": {"coins": [1, 2, 5], "amount": 11}, "expected": 3},
+        {"input": {"coins": [2], "amount": 3}, "expected": -1},
+        {"input": {"coins": [1], "amount": 0}, "expected": 0}
+      ]
+    },
+    {
+      "id": 89,
+      "leetcode_id": 139,
+      "title": "单词拆分",
+      "title_en": "Word Break",
+      "difficulty": "Medium",
+      "tags": ["字典树", "记忆化搜索", "数组", "哈希表", "字符串", "动态规划"],
+      "url": "https://leetcode.cn/problems/word-break/",
+      "category": "动态规划",
+      "codetop_frequency": 120,
+      "description": "给你一个字符串 s 和一个字符串列表 wordDict 作为字典。如果可以利用字典中出现的一个或多个单词拼接出 s 则返回 true。注意：不要求字典中出现的单词全部都使用，并且字典中的单词可以重复使用。",
+      "examples": [
+        {
+          "input": "s = \"leetcode\", wordDict = [\"leet\",\"code\"]",
+          "output": "true",
+          "explanation": "返回 true 因为 \"leetcode\" 可以由 \"leet\" 和 \"code\" 拼接成"
+        },
+        {
+          "input": "s = \"applepenapple\", wordDict = [\"apple\",\"pen\"]",
+          "output": "true",
+          "explanation": "返回 true 因为 \"applepenapple\" 可以由 \"apple\" \"pen\" \"apple\" 拼接成"
+        }
+      ],
+      "constraints": [
+        "1 <= s.length <= 300",
+        "1 <= wordDict.length <= 1000",
+        "1 <= wordDict[i].length <= 20",
+        "s 和 wordDict[i] 仅由小写英文字母组成",
+        "wordDict 中的所有字符串互不相同"
+      ],
+      "function_signature": "def wordBreak(self, s: str, wordDict: List[str]) -> bool:",
+      "test_cases": [
+        {"input": {"s": "leetcode", "wordDict": ["leet", "code"]}, "expected": true},
+        {"input": {"s": "applepenapple", "wordDict": ["apple", "pen"]}, "expected": true},
+        {"input": {"s": "catsandog", "wordDict": ["cats", "dog", "sand", "and", "cat"]}, "expected": false}
+      ]
+    },
+    {
+      "id": 90,
+      "leetcode_id": 300,
+      "title": "最长递增子序列",
+      "title_en": "Longest Increasing Subsequence",
+      "difficulty": "Medium",
+      "tags": ["数组", "二分查找", "动态规划"],
+      "url": "https://leetcode.cn/problems/longest-increasing-subsequence/",
+      "category": "动态规划",
+      "codetop_frequency": 165,
+      "description": "给你一个整数数组 nums，找到其中最长严格递增子序列的长度。子序列是由数组派生而来的序列，删除（或不删除）数组中的元素而不改变其余元素的顺序。例如，[3,6,2,7] 是数组 [0,3,1,6,2,2,7] 的子序列。",
+      "examples": [
+        {
+          "input": "nums = [10,9,2,5,3,7,101,18]",
+          "output": "4",
+          "explanation": "最长递增子序列是 [2,3,7,101]，因此长度为 4"
+        },
+        {
+          "input": "nums = [0,1,0,3,2,3]",
+          "output": "4",
+          "explanation": "最长递增子序列是 [0,1,2,3]，因此长度为 4"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 2500",
+        "-10^4 <= nums[i] <= 10^4"
+      ],
+      "function_signature": "def lengthOfLIS(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [10, 9, 2, 5, 3, 7, 101, 18]}, "expected": 4},
+        {"input": {"nums": [0, 1, 0, 3, 2, 3]}, "expected": 4},
+        {"input": {"nums": [7, 7, 7, 7, 7, 7, 7]}, "expected": 1}
+      ]
+    },
+    {
+      "id": 91,
+      "leetcode_id": 152,
+      "title": "乘积最大子数组",
+      "title_en": "Maximum Product Subarray",
+      "difficulty": "Medium",
+      "tags": ["数组", "动态规划"],
+      "url": "https://leetcode.cn/problems/maximum-product-subarray/",
+      "category": "动态规划",
+      "codetop_frequency": 95,
+      "description": "给你一个整数数组 nums，请你找出数组中乘积最大的非空连续子数组（该子数组中至少包含一个数字），并返回该子数组所对应的乘积。测试用例的答案是一个 32 位整数。",
+      "examples": [
+        {
+          "input": "nums = [2,3,-2,4]",
+          "output": "6",
+          "explanation": "子数组 [2,3] 有最大乘积 6"
+        },
+        {
+          "input": "nums = [-2,0,-1]",
+          "output": "0",
+          "explanation": "结果不能为 2, 因为 [-2,-1] 不是子数组"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 2 * 10^4",
+        "-10 <= nums[i] <= 10",
+        "nums 的任何前缀或后缀的乘积都保证是一个 32 位整数"
+      ],
+      "function_signature": "def maxProduct(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [2, 3, -2, 4]}, "expected": 6},
+        {"input": {"nums": [-2, 0, -1]}, "expected": 0},
+        {"input": {"nums": [-2, 3, -4]}, "expected": 24}
+      ]
+    },
+    {
+      "id": 92,
+      "leetcode_id": 416,
+      "title": "分割等和子集",
+      "title_en": "Partition Equal Subset Sum",
+      "difficulty": "Medium",
+      "tags": ["数组", "动态规划"],
+      "url": "https://leetcode.cn/problems/partition-equal-subset-sum/",
+      "category": "动态规划",
+      "codetop_frequency": 85,
+      "description": "给你一个只包含正整数的非空数组 nums。请你判断是否可以将这个数组分割成两个子集，使得两个子集的元素和相等。",
+      "examples": [
+        {
+          "input": "nums = [1,5,11,5]",
+          "output": "true",
+          "explanation": "数组可以分割成 [1, 5, 5] 和 [11]"
+        },
+        {
+          "input": "nums = [1,2,3,5]",
+          "output": "false",
+          "explanation": "数组不能分割成两个元素和相等的子集"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 200",
+        "1 <= nums[i] <= 100"
+      ],
+      "function_signature": "def canPartition(self, nums: List[int]) -> bool:",
+      "test_cases": [
+        {"input": {"nums": [1, 5, 11, 5]}, "expected": true},
+        {"input": {"nums": [1, 2, 3, 5]}, "expected": false},
+        {"input": {"nums": [1, 1]}, "expected": true}
+      ]
+    },
+    {
+      "id": 93,
+      "leetcode_id": 32,
+      "title": "最长有效括号",
+      "title_en": "Longest Valid Parentheses",
+      "difficulty": "Hard",
+      "tags": ["栈", "字符串", "动态规划"],
+      "url": "https://leetcode.cn/problems/longest-valid-parentheses/",
+      "category": "动态规划",
+      "codetop_frequency": 110,
+      "description": "给你一个只包含 '(' 和 ')' 的字符串，找出最长有效（格式正确且连续）括号子串的长度。",
+      "examples": [
+        {
+          "input": "s = \"(()\"",
+          "output": "2",
+          "explanation": "最长有效括号子串是 \"()\""
+        },
+        {
+          "input": "s = \")()())\"",
+          "output": "4",
+          "explanation": "最长有效括号子串是 \"()()\""
+        }
+      ],
+      "constraints": [
+        "0 <= s.length <= 3 * 10^4",
+        "s[i] 为 '(' 或 ')'"
+      ],
+      "function_signature": "def longestValidParentheses(self, s: str) -> int:",
+      "test_cases": [
+        {"input": {"s": "(()"}, "expected": 2},
+        {"input": {"s": ")()())"}, "expected": 4},
+        {"input": {"s": ""}, "expected": 0}
+      ]
+    },
+    {
+      "id": 94,
+      "leetcode_id": 62,
+      "title": "不同路径",
+      "title_en": "Unique Paths",
+      "difficulty": "Medium",
+      "tags": ["数学", "动态规划", "组合数学"],
+      "url": "https://leetcode.cn/problems/unique-paths/",
+      "category": "多维动态规划",
+      "codetop_frequency": 120,
+      "description": "一个机器人位于一个 m x n 网格的左上角。机器人每次只能向下或者向右移动一步。机器人试图达到网格的右下角。问总共有多少条不同的路径？",
+      "examples": [
+        {
+          "input": "m = 3, n = 7",
+          "output": "28",
+          "explanation": "3x7网格共有28条不同路径"
+        },
+        {
+          "input": "m = 3, n = 2",
+          "output": "3",
+          "explanation": "3条路径：右下下、下右下、下下右"
+        }
+      ],
+      "constraints": [
+        "1 <= m, n <= 100"
+      ],
+      "function_signature": "def uniquePaths(self, m: int, n: int) -> int:",
+      "test_cases": [
+        {"input": {"m": 3, "n": 7}, "expected": 28},
+        {"input": {"m": 3, "n": 2}, "expected": 3},
+        {"input": {"m": 1, "n": 1}, "expected": 1}
+      ]
+    },
+    {
+      "id": 95,
+      "leetcode_id": 64,
+      "title": "最小路径和",
+      "title_en": "Minimum Path Sum",
+      "difficulty": "Medium",
+      "tags": ["数组", "动态规划", "矩阵"],
+      "url": "https://leetcode.cn/problems/minimum-path-sum/",
+      "category": "多维动态规划",
+      "codetop_frequency": 100,
+      "description": "给定一个包含非负整数的 m x n 网格 grid，请找出一条从左上角到右下角的路径，使得路径上的数字总和为最小。说明：每次只能向下或者向右移动一步。",
+      "examples": [
+        {
+          "input": "grid = [[1,3,1],[1,5,1],[4,2,1]]",
+          "output": "7",
+          "explanation": "路径 1->3->1->1->1 的总和最小，为7"
+        },
+        {
+          "input": "grid = [[1,2,3],[4,5,6]]",
+          "output": "12",
+          "explanation": "路径 1->2->3->6 的总和为12"
+        }
+      ],
+      "constraints": [
+        "m == grid.length",
+        "n == grid[i].length",
+        "1 <= m, n <= 200",
+        "0 <= grid[i][j] <= 200"
+      ],
+      "function_signature": "def minPathSum(self, grid: List[List[int]]) -> int:",
+      "test_cases": [
+        {"input": {"grid": [[1, 3, 1], [1, 5, 1], [4, 2, 1]]}, "expected": 7},
+        {"input": {"grid": [[1, 2, 3], [4, 5, 6]]}, "expected": 12},
+        {"input": {"grid": [[1]]}, "expected": 1}
+      ]
+    },
+    {
+      "id": 96,
+      "leetcode_id": 5,
+      "title": "最长回文子串",
+      "title_en": "Longest Palindromic Substring",
+      "difficulty": "Medium",
+      "tags": ["双指针", "字符串", "动态规划"],
+      "url": "https://leetcode.cn/problems/longest-palindromic-substring/",
+      "category": "多维动态规划",
+      "codetop_frequency": 240,
+      "description": "给你一个字符串 s，找到 s 中最长的回文子串。如果字符串的反序与原始字符串相同，则该字符串称为回文字符串。",
+      "examples": [
+        {
+          "input": "s = \"babad\"",
+          "output": "\"bab\"",
+          "explanation": "\"aba\" 同样是符合题意的答案"
+        },
+        {
+          "input": "s = \"cbbd\"",
+          "output": "\"bb\"",
+          "explanation": "最长回文子串为 \"bb\""
+        }
+      ],
+      "constraints": [
+        "1 <= s.length <= 1000",
+        "s 仅由数字和英文字母组成"
+      ],
+      "function_signature": "def longestPalindrome(self, s: str) -> str:",
+      "test_cases": [
+        {"input": {"s": "babad"}, "expected": "bab"},
+        {"input": {"s": "cbbd"}, "expected": "bb"},
+        {"input": {"s": "a"}, "expected": "a"}
+      ]
+    },
+    {
+      "id": 97,
+      "leetcode_id": 1143,
+      "title": "最长公共子序列",
+      "title_en": "Longest Common Subsequence",
+      "difficulty": "Medium",
+      "tags": ["字符串", "动态规划"],
+      "url": "https://leetcode.cn/problems/longest-common-subsequence/",
+      "category": "多维动态规划",
+      "codetop_frequency": 90,
+      "description": "给定两个字符串 text1 和 text2，返回这两个字符串的最长公共子序列的长度。如果不存在公共子序列，返回 0。一个字符串的子序列是指这样一个新的字符串：它是由原字符串在不改变字符的相对顺序的情况下删除某些字符（也可以不删除任何字符）后组成的新字符串。",
+      "examples": [
+        {
+          "input": "text1 = \"abcde\", text2 = \"ace\"",
+          "output": "3",
+          "explanation": "最长公共子序列是 \"ace\"，它的长度为 3"
+        },
+        {
+          "input": "text1 = \"abc\", text2 = \"abc\"",
+          "output": "3",
+          "explanation": "最长公共子序列是 \"abc\"，它的长度为 3"
+        }
+      ],
+      "constraints": [
+        "1 <= text1.length, text2.length <= 1000",
+        "text1 和 text2 仅由小写英文字符组成"
+      ],
+      "function_signature": "def longestCommonSubsequence(self, text1: str, text2: str) -> int:",
+      "test_cases": [
+        {"input": {"text1": "abcde", "text2": "ace"}, "expected": 3},
+        {"input": {"text1": "abc", "text2": "abc"}, "expected": 3},
+        {"input": {"text1": "abc", "text2": "def"}, "expected": 0}
+      ]
+    },
+    {
+      "id": 98,
+      "leetcode_id": 72,
+      "title": "编辑距离",
+      "title_en": "Edit Distance",
+      "difficulty": "Medium",
+      "tags": ["字符串", "动态规划"],
+      "url": "https://leetcode.cn/problems/edit-distance/",
+      "category": "多维动态规划",
+      "codetop_frequency": 130,
+      "description": "给你两个单词 word1 和 word2，请返回将 word1 转换成 word2 所使用的最少操作数。你可以对一个单词进行如下三种操作：插入一个字符、删除一个字符、替换一个字符。",
+      "examples": [
+        {
+          "input": "word1 = \"horse\", word2 = \"ros\"",
+          "output": "3",
+          "explanation": "horse -> rorse (将 'h' 替换为 'r') -> rose (删除 'r') -> ros (删除 'e')"
+        },
+        {
+          "input": "word1 = \"intention\", word2 = \"execution\"",
+          "output": "5",
+          "explanation": "intention -> exention -> exection -> execution (共5步)"
+        }
+      ],
+      "constraints": [
+        "0 <= word1.length, word2.length <= 500",
+        "word1 和 word2 由小写英文字母组成"
+      ],
+      "function_signature": "def minDistance(self, word1: str, word2: str) -> int:",
+      "test_cases": [
+        {"input": {"word1": "horse", "word2": "ros"}, "expected": 3},
+        {"input": {"word1": "intention", "word2": "execution"}, "expected": 5},
+        {"input": {"word1": "", "word2": "a"}, "expected": 1}
+      ]
+    },
+    {
+      "id": 99,
+      "leetcode_id": 136,
+      "title": "只出现一次的数字",
+      "title_en": "Single Number",
+      "difficulty": "Easy",
+      "tags": ["位运算", "数组"],
+      "url": "https://leetcode.cn/problems/single-number/",
+      "category": "技巧",
+      "codetop_frequency": 110,
+      "description": "给你一个非空整数数组 nums，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。你必须设计并实现线性时间复杂度的算法来解决此问题，且该算法只使用常量额外空间。",
+      "examples": [
+        {
+          "input": "nums = [2,2,1]",
+          "output": "1",
+          "explanation": "1只出现一次"
+        },
+        {
+          "input": "nums = [4,1,2,1,2]",
+          "output": "4",
+          "explanation": "4只出现一次"
+        }
+      ],
+      "constraints": [
+        "1 <= nums.length <= 3 * 10^4",
+        "-3 * 10^4 <= nums[i] <= 3 * 10^4",
+        "除了某个元素只出现一次以外，其余每个元素均出现两次"
+      ],
+      "function_signature": "def singleNumber(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [2, 2, 1]}, "expected": 1},
+        {"input": {"nums": [4, 1, 2, 1, 2]}, "expected": 4},
+        {"input": {"nums": [1]}, "expected": 1}
+      ]
+    },
+    {
+      "id": 100,
+      "leetcode_id": 169,
+      "title": "多数元素",
+      "title_en": "Majority Element",
+      "difficulty": "Easy",
+      "tags": ["数组", "哈希表", "分治", "计数", "排序"],
+      "url": "https://leetcode.cn/problems/majority-element/",
+      "category": "技巧",
+      "codetop_frequency": 95,
+      "description": "给定一个大小为 n 的数组 nums，返回其中的多数元素。多数元素是指在数组中出现次数大于 n/2 的元素。你可以假设数组是非空的，并且给定的数组总是存在多数元素。",
+      "examples": [
+        {
+          "input": "nums = [3,2,3]",
+          "output": "3",
+          "explanation": "3出现了2次，超过数组长度的一半"
+        },
+        {
+          "input": "nums = [2,2,1,1,1,2,2]",
+          "output": "2",
+          "explanation": "2出现了4次，超过数组长度的一半"
+        }
+      ],
+      "constraints": [
+        "n == nums.length",
+        "1 <= n <= 5 * 10^4",
+        "-10^9 <= nums[i] <= 10^9"
+      ],
+      "function_signature": "def majorityElement(self, nums: List[int]) -> int:",
+      "test_cases": [
+        {"input": {"nums": [3, 2, 3]}, "expected": 3},
+        {"input": {"nums": [2, 2, 1, 1, 1, 2, 2]}, "expected": 2},
+        {"input": {"nums": [1]}, "expected": 1}
+      ]
+    }
+  ]
+}

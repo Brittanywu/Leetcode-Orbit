@@ -1,0 +1,46 @@
+# ===== User Personal Data (never commit) =====
+
+# User profile & learning state
+soul.md
+data/hot100_index.json
+
+# Practice reports & analysis
+reports/
+design_docs/
+hot100_user_analysis.md
+
+# Active workspace
+workspace/
+
+# ===== System Caches =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# ===== OS Files =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ===== Editor / IDE =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# ===== Claude Code Local State =====
+# Keep .claude/commands/ (shared), ignore session state
+.claude/settings.local.json

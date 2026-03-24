@@ -1,0 +1,1342 @@
+{
+  "source": [
+    "realnghon/LeetCode_Hot100_Python",
+    "leetcode-hot-100-master"
+  ],
+  "mapping": {
+    "1": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "1. 两数之和",
+        "line_start": 2,
+        "line_end": 34
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/哈希/1. 两数之和.md",
+        "category": "哈希",
+        "line_start": 1,
+        "line_end": 125
+      }
+    },
+    "2": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "2. 两数相加",
+        "line_start": 905,
+        "line_end": 976
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/2. 两数相加.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 123
+      }
+    },
+    "3": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "3. 无重复字符的最长子串",
+        "line_start": 241,
+        "line_end": 297
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/滑动窗口/3. 无重复字符的最长子串.md",
+        "category": "滑动窗口",
+        "line_start": 1,
+        "line_end": 136
+      }
+    },
+    "4": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/二分查找/4. 寻找两个正序数组的中位数.md",
+        "category": "二分查找",
+        "line_start": 1,
+        "line_end": 115
+      }
+    },
+    "5": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "5. 最长回文子串",
+        "line_start": 3604,
+        "line_end": 3655
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/多维动态规划/5. 最长回文子串.md",
+        "category": "多维动态规划",
+        "line_start": 1,
+        "line_end": 119
+      }
+    },
+    "11": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "11. 盛最多水的容器",
+        "line_start": 116,
+        "line_end": 172
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/双指针/11. 盛最多水的容器.md",
+        "category": "双指针",
+        "line_start": 1,
+        "line_end": 125
+      }
+    },
+    "15": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "15. 三数之和",
+        "line_start": 173,
+        "line_end": 240
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/双指针/15. 三数之和.md",
+        "category": "双指针",
+        "line_start": 1,
+        "line_end": 157
+      }
+    },
+    "17": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "17. 电话号码的字母组合",
+        "line_start": 2206,
+        "line_end": 2253
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/回溯/17. 电话号码的字母组合.md",
+        "category": "回溯",
+        "line_start": 1,
+        "line_end": 96
+      }
+    },
+    "19": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "19. 删除链表的倒数第 N 个结点",
+        "line_start": 977,
+        "line_end": 1034
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/19. 删除链表的倒数第 N 个结点.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 126
+      }
+    },
+    "20": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "20. 有效的括号",
+        "line_start": 659,
+        "line_end": 714
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/栈/20. 有效的括号.md",
+        "category": "栈",
+        "line_start": 1,
+        "line_end": 79
+      }
+    },
+    "21": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "21. 合并两个有序链表",
+        "line_start": 251,
+        "line_end": 300
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/21. 合并两个有序链表.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 115
+      }
+    },
+    "22": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "22. 括号生成",
+        "line_start": 2311,
+        "line_end": 2361
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/回溯/22. 括号生成.md",
+        "category": "回溯",
+        "line_start": 1,
+        "line_end": 64
+      }
+    },
+    "23": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/23. 合并 K 个升序链表.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 178
+      }
+    },
+    "24": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "24. 两两交换链表中的节点",
+        "line_start": 1035,
+        "line_end": 1097
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/24. 两两交换链表中的节点.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 117
+      }
+    },
+    "25": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/25. K 个一组翻转链表.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 159
+      }
+    },
+    "31": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "31. 下一个排列",
+        "line_start": 3813,
+        "line_end": 3864
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/技巧/31. 下一个排列.md",
+        "category": "技巧",
+        "line_start": 1,
+        "line_end": 90
+      }
+    },
+    "32": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/32. 最长有效括号.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 81
+      }
+    },
+    "33": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "33. 搜索旋转排序数组",
+        "line_start": 2586,
+        "line_end": 2645
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二分查找/33. 搜索旋转排序数组.md",
+        "category": "二分查找",
+        "line_start": 1,
+        "line_end": 92
+      }
+    },
+    "34": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "34. 在排序数组中查找元素的第一个和最后一个位置",
+        "line_start": 2533,
+        "line_end": 2585
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二分查找/34. 在排序数组中查找元素的第一个和最后一个位置.md",
+        "category": "二分查找",
+        "line_start": 1,
+        "line_end": 118
+      }
+    },
+    "35": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "35. 搜索插入位置",
+        "line_start": 615,
+        "line_end": 658
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二分查找/35. 搜索插入位置.md",
+        "category": "二分查找",
+        "line_start": 1,
+        "line_end": 75
+      }
+    },
+    "39": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "39. 组合总和",
+        "line_start": 2254,
+        "line_end": 2310
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/回溯/39. 组合总和.md",
+        "category": "回溯",
+        "line_start": 1,
+        "line_end": 100
+      }
+    },
+    "41": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/普通数组/41. 缺失的第一个正数.md",
+        "category": "普通数组",
+        "line_start": 1,
+        "line_end": 123
+      }
+    },
+    "42": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/双指针/42. 接雨水.md",
+        "category": "双指针",
+        "line_start": 1,
+        "line_end": 150
+      }
+    },
+    "45": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "45. 跳跃游戏 II",
+        "line_start": 3027,
+        "line_end": 3081
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/贪心算法/45. 跳跃游戏 II.md",
+        "category": "贪心算法",
+        "line_start": 1,
+        "line_end": 90
+      }
+    },
+    "46": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "46. 全排列",
+        "line_start": 2082,
+        "line_end": 2164
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/回溯/46. 全排列.md",
+        "category": "回溯",
+        "line_start": 1,
+        "line_end": 95
+      }
+    },
+    "48": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "48. 旋转图像",
+        "line_start": 735,
+        "line_end": 793
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/矩阵/48. 旋转图像.md",
+        "category": "矩阵",
+        "line_start": 1,
+        "line_end": 137
+      }
+    },
+    "49": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "49. 字母异位词分组",
+        "line_start": 2,
+        "line_end": 46
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/哈希/49. 字母异位词分组.md",
+        "category": "哈希",
+        "line_start": 1,
+        "line_end": 91
+      }
+    },
+    "51": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/回溯/51. N 皇后.md",
+        "category": "回溯",
+        "line_start": 1,
+        "line_end": 136
+      }
+    },
+    "53": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "53. 最大子数组和",
+        "line_start": 411,
+        "line_end": 459
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/53. 最大子数组和.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 111
+      }
+    },
+    "54": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "54. 螺旋矩阵",
+        "line_start": 669,
+        "line_end": 734
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/矩阵/54. 螺旋矩阵.md",
+        "category": "矩阵",
+        "line_start": 1,
+        "line_end": 107
+      }
+    },
+    "55": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "55. 跳跃游戏",
+        "line_start": 2993,
+        "line_end": 3026
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/贪心算法/55. 跳跃游戏.md",
+        "category": "贪心算法",
+        "line_start": 1,
+        "line_end": 62
+      }
+    },
+    "56": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "56. 合并区间",
+        "line_start": 460,
+        "line_end": 496
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/普通数组/56. 合并区间.md",
+        "category": "普通数组",
+        "line_start": 1,
+        "line_end": 127
+      }
+    },
+    "62": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "62. 不同路径",
+        "line_start": 3515,
+        "line_end": 3541
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/多维动态规划/62. 不同路径.md",
+        "category": "多维动态规划",
+        "line_start": 1,
+        "line_end": 117
+      }
+    },
+    "64": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "64. 最小路径和",
+        "line_start": 3542,
+        "line_end": 3603
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/多维动态规划/64. 最小路径和.md",
+        "category": "多维动态规划",
+        "line_start": 1,
+        "line_end": 104
+      }
+    },
+    "70": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "70. 爬楼梯",
+        "line_start": 762,
+        "line_end": 804
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/70. 爬楼梯.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 65
+      }
+    },
+    "72": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "72. 编辑距离",
+        "line_start": 3711,
+        "line_end": 3769
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/多维动态规划/72. 编辑距离.md",
+        "category": "多维动态规划",
+        "line_start": 1,
+        "line_end": 125
+      }
+    },
+    "73": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "73. 矩阵置零",
+        "line_start": 608,
+        "line_end": 668
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/矩阵/73. 矩阵置零.md",
+        "category": "矩阵",
+        "line_start": 1,
+        "line_end": 140
+      }
+    },
+    "74": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "74. 搜索二维矩阵",
+        "line_start": 2481,
+        "line_end": 2532
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二分查找/74. 搜索二维矩阵.md",
+        "category": "二分查找",
+        "line_start": 1,
+        "line_end": 111
+      }
+    },
+    "75": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "75. 颜色分类",
+        "line_start": 3770,
+        "line_end": 3812
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/技巧/75. 颜色分类.md",
+        "category": "技巧",
+        "line_start": 1,
+        "line_end": 87
+      }
+    },
+    "76": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/子串/76. 最小覆盖子串.md",
+        "category": "子串",
+        "line_start": 1,
+        "line_end": 149
+      }
+    },
+    "78": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "78. 子集",
+        "line_start": 2165,
+        "line_end": 2205
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/回溯/78. 子集.md",
+        "category": "回溯",
+        "line_start": 1,
+        "line_end": 85
+      }
+    },
+    "79": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "79. 单词搜索",
+        "line_start": 2362,
+        "line_end": 2428
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/回溯/79. 单词搜索.md",
+        "category": "回溯",
+        "line_start": 1,
+        "line_end": 115
+      }
+    },
+    "84": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/栈/84. 柱状图中最大的矩形.md",
+        "category": "栈",
+        "line_start": 1,
+        "line_end": 114
+      }
+    },
+    "94": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "94. 二叉树的中序遍历",
+        "line_start": 301,
+        "line_end": 375
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/94. 二叉树的中序遍历.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 117
+      }
+    },
+    "98": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "98. 验证二叉搜索树",
+        "line_start": 1384,
+        "line_end": 1447
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/98. 验证二叉搜索树.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 146
+      }
+    },
+    "101": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/101. 对称二叉树.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 146
+      }
+    },
+    "102": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "102. 二叉树的层序遍历",
+        "line_start": 1327,
+        "line_end": 1383
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/102. 二叉树的层序遍历.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 99
+      }
+    },
+    "104": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "104. 二叉树的最大深度",
+        "line_start": 376,
+        "line_end": 441
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/104. 二叉树的最大深度.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 121
+      }
+    },
+    "105": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "105. 从前序与中序遍历序列构造二叉树",
+        "line_start": 1598,
+        "line_end": 1653
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/105. 从前序与中序遍历序列构造二叉树.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 116
+      }
+    },
+    "108": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "108. 将有序数组转换为二叉搜索树",
+        "line_start": 556,
+        "line_end": 614
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/108. 将有序数组转换为二叉搜索树.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 90
+      }
+    },
+    "114": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "114. 二叉树展开为链表",
+        "line_start": 1550,
+        "line_end": 1597
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/114. 二叉树展开为链表.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 167
+      }
+    },
+    "118": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "118. 杨辉三角",
+        "line_start": 805,
+        "line_end": 852
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/118. 杨辉三角.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 83
+      }
+    },
+    "121": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "121. 买卖股票的最佳时机",
+        "line_start": 715,
+        "line_end": 761
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/贪心算法/121. 买卖股票的最佳时机.md",
+        "category": "贪心算法",
+        "line_start": 1,
+        "line_end": 65
+      }
+    },
+    "124": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/124. 二叉树中的最大路径和.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 93
+      }
+    },
+    "128": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "128. 最长连续序列",
+        "line_start": 47,
+        "line_end": 115
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/哈希/128. 最长连续序列.md",
+        "category": "哈希",
+        "line_start": 1,
+        "line_end": 106
+      }
+    },
+    "131": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "131. 分割回文串",
+        "line_start": 2429,
+        "line_end": 2480
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/回溯/131. 分割回文串.md",
+        "category": "回溯",
+        "line_start": 1,
+        "line_end": 96
+      }
+    },
+    "136": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "136. 只出现一次的数字",
+        "line_start": 853,
+        "line_end": 892
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/技巧/136. 只出现一次的数字.md",
+        "category": "技巧",
+        "line_start": 1,
+        "line_end": 63
+      }
+    },
+    "138": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "138. 随机链表的复制",
+        "line_start": 1098,
+        "line_end": 1176
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/138. 随机链表的复制.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 123
+      }
+    },
+    "139": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "139. 单词拆分",
+        "line_start": 3264,
+        "line_end": 3314
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/139. 单词拆分.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 81
+      }
+    },
+    "141": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "141. 环形链表",
+        "line_start": 211,
+        "line_end": 250
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/141. 环形链表.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 122
+      }
+    },
+    "142": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "142. 环形链表 II",
+        "line_start": 846,
+        "line_end": 904
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/142. 环形链表 II.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 137
+      }
+    },
+    "146": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "146. LRU 缓存",
+        "line_start": 1242,
+        "line_end": 1326
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/146. LRU 缓存.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 222
+      }
+    },
+    "148": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "148. 排序链表",
+        "line_start": 1177,
+        "line_end": 1241
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/148. 排序链表.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 152
+      }
+    },
+    "152": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "152. 乘积最大子数组",
+        "line_start": 3399,
+        "line_end": 3450
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/152. 乘积最大子数组.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 88
+      }
+    },
+    "153": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "153. 寻找旋转排序数组中的最小值",
+        "line_start": 2646,
+        "line_end": 2699
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二分查找/153. 寻找旋转排序数组中的最小值.md",
+        "category": "二分查找",
+        "line_start": 1,
+        "line_end": 91
+      }
+    },
+    "155": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "155. 最小栈",
+        "line_start": 2700,
+        "line_end": 2756
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/栈/155. 最小栈.md",
+        "category": "栈",
+        "line_start": 1,
+        "line_end": 113
+      }
+    },
+    "160": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "160. 相交链表",
+        "line_start": 65,
+        "line_end": 106
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/160. 相交链表.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 157
+      }
+    },
+    "169": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "169. 多数元素",
+        "line_start": 893,
+        "line_end": 968
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/技巧/169. 多数元素.md",
+        "category": "技巧",
+        "line_start": 1,
+        "line_end": 70
+      }
+    },
+    "189": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "189. 轮转数组",
+        "line_start": 497,
+        "line_end": 563
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/普通数组/189. 轮转数组.md",
+        "category": "普通数组",
+        "line_start": 1,
+        "line_end": 128
+      }
+    },
+    "198": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "198. 打家劫舍",
+        "line_start": 3113,
+        "line_end": 3164
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/198. 打家劫舍.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 65
+      }
+    },
+    "199": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "199. 二叉树的右视图",
+        "line_start": 1489,
+        "line_end": 1549
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/199. 二叉树的右视图.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 144
+      }
+    },
+    "200": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "200. 岛屿数量",
+        "line_start": 1783,
+        "line_end": 1849
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/图论/200. 岛屿数量.md",
+        "category": "图论",
+        "line_start": 1,
+        "line_end": 119
+      }
+    },
+    "206": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "206. 反转链表",
+        "line_start": 107,
+        "line_end": 151
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/206. 反转链表.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 97
+      }
+    },
+    "207": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "207. 课程表",
+        "line_start": 1918,
+        "line_end": 1988
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/图论/207. 课程表.md",
+        "category": "图论",
+        "line_start": 1,
+        "line_end": 155
+      }
+    },
+    "208": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "208. 实现 Trie (前缀树)",
+        "line_start": 1989,
+        "line_end": 2081
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/图论/208. 实现 Trie (前缀树).md",
+        "category": "图论",
+        "line_start": 1,
+        "line_end": 180
+      }
+    },
+    "215": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "215. 数组中的第K个最大元素",
+        "line_start": 2862,
+        "line_end": 2940
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/堆/215. 数组中的第K个最大元素.md",
+        "category": "堆",
+        "line_start": 1,
+        "line_end": 92
+      }
+    },
+    "226": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "226. 翻转二叉树",
+        "line_start": 442,
+        "line_end": 509
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/226. 翻转二叉树.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 124
+      }
+    },
+    "230": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "230. 二叉搜索树中第 K 小的元素",
+        "line_start": 1448,
+        "line_end": 1488
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/230. 二叉搜索树中第K小的元素.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 134
+      }
+    },
+    "234": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "234. 回文链表",
+        "line_start": 152,
+        "line_end": 210
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/链表/234. 回文链表.md",
+        "category": "链表",
+        "line_start": 1,
+        "line_end": 141
+      }
+    },
+    "236": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "236. 二叉树的最近公共祖先",
+        "line_start": 1723,
+        "line_end": 1782
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/236. 二叉树的最近公共祖先.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 107
+      }
+    },
+    "238": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "238. 除自身以外数组的乘积",
+        "line_start": 564,
+        "line_end": 607
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/普通数组/238. 除自身以外数组的乘积.md",
+        "category": "普通数组",
+        "line_start": 1,
+        "line_end": 126
+      }
+    },
+    "239": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/子串/239. 滑动窗口最大值.md",
+        "category": "子串",
+        "line_start": 1,
+        "line_end": 143
+      }
+    },
+    "240": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "240. 搜索二维矩阵 II",
+        "line_start": 794,
+        "line_end": 845
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/矩阵/240. 搜索二维矩阵 II.md",
+        "category": "矩阵",
+        "line_start": 1,
+        "line_end": 122
+      }
+    },
+    "279": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "279. 完全平方数",
+        "line_start": 3165,
+        "line_end": 3217
+      }
+    },
+    "283": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "283. 移动零",
+        "line_start": 35,
+        "line_end": 64
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/双指针/283. 移动零.md",
+        "category": "双指针",
+        "line_start": 1,
+        "line_end": 135
+      }
+    },
+    "287": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "287. 寻找重复数",
+        "line_start": 3865,
+        "line_end": 3917
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/技巧/287. 寻找重复数.md",
+        "category": "技巧",
+        "line_start": 1,
+        "line_end": 85
+      }
+    },
+    "295": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/堆/295. 数据流的中位数.md",
+        "category": "堆",
+        "line_start": 1,
+        "line_end": 121
+      }
+    },
+    "297": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/297. 二叉树的序列化与反序列化.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 278
+      }
+    },
+    "300": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "300. 最长递增子序列",
+        "line_start": 3315,
+        "line_end": 3398
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/300. 最长递增子序列.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 76
+      }
+    },
+    "322": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "322. 零钱兑换",
+        "line_start": 3218,
+        "line_end": 3263
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/322. 零钱兑换.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 72
+      }
+    },
+    "347": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "347. 前 K 个高频元素",
+        "line_start": 2941,
+        "line_end": 2992
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/堆/347. 前 K 个高频元素.md",
+        "category": "堆",
+        "line_start": 1,
+        "line_end": 88
+      }
+    },
+    "394": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "394. 字符串解码",
+        "line_start": 2757,
+        "line_end": 2861
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/栈/394. 字符串解码.md",
+        "category": "栈",
+        "line_start": 1,
+        "line_end": 97
+      }
+    },
+    "416": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "416. 分割等和子集",
+        "line_start": 3451,
+        "line_end": 3514
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/动态规划/416. 分割等和子集.md",
+        "category": "动态规划",
+        "line_start": 1,
+        "line_end": 76
+      }
+    },
+    "437": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "437. 路径总和 III",
+        "line_start": 1654,
+        "line_end": 1722
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/437. 路径总和III.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 174
+      }
+    },
+    "438": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "438. 找到字符串中所有字母异位词",
+        "line_start": 298,
+        "line_end": 361
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/滑动窗口/438. 找到字符串中所有字母异位词.md",
+        "category": "滑动窗口",
+        "line_start": 1,
+        "line_end": 148
+      }
+    },
+    "538": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/538. 把二叉搜索树转换为累加树.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 239
+      }
+    },
+    "543": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Easy.md",
+        "section": "543. 二叉树的直径",
+        "line_start": 510,
+        "line_end": 555
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/543. 二叉树的直径.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 91
+      }
+    },
+    "560": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "560. 和为 K 的子数组",
+        "line_start": 362,
+        "line_end": 410
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/子串/560. 和为 K 的子数组.md",
+        "category": "子串",
+        "line_start": 1,
+        "line_end": 133
+      }
+    },
+    "617": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/二叉树/617. 合并二叉树.md",
+        "category": "二叉树",
+        "line_start": 1,
+        "line_end": 198
+      }
+    },
+    "739": {
+      "secondary": {
+        "file": "leetcode-hot-100-master/栈/739. 每日温度.md",
+        "category": "栈",
+        "line_start": 1,
+        "line_end": 75
+      }
+    },
+    "763": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "763. 划分字母区间",
+        "line_start": 3082,
+        "line_end": 3112
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/贪心算法/763. 划分字母区间.md",
+        "category": "贪心算法",
+        "line_start": 1,
+        "line_end": 85
+      }
+    },
+    "994": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "994. 腐烂的橘子",
+        "line_start": 1850,
+        "line_end": 1917
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/图论/994. 腐烂的橘子.md",
+        "category": "图论",
+        "line_start": 1,
+        "line_end": 161
+      }
+    },
+    "1143": {
+      "primary": {
+        "file": "LeetCode_Hot100_Python/Hot100_Medium.md",
+        "section": "1143. 最长公共子序列",
+        "line_start": 3656,
+        "line_end": 3710
+      },
+      "secondary": {
+        "file": "leetcode-hot-100-master/多维动态规划/1143. 最长公共子序列.md",
+        "category": "多维动态规划",
+        "line_start": 1,
+        "line_end": 113
+      }
+    }
+  }
+}
