@@ -59,7 +59,7 @@
 
 ```bash
 # 1. 克隆本仓库
-git clone https://github.com/YOUR_USERNAME/Leetcode-Orbit.git
+git clone https://github.com/Brittanywu/Leetcode-Orbit.git
 cd Leetcode-Orbit
 
 # 2. 启动 Claude Code
