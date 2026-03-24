@@ -87,11 +87,23 @@ for i, num in enumerate(nums):
 
 ### 权重影响
 
-| 提示级别 | 对 practice_weight 的影响 | 记录方式 |
-|---------|-------------------------|---------|
-| Level 1-2 | 无惩罚 | history 记录 hint_level: 1 或 2 |
-| Level 3 | 权重不降低（即使后续答对）| hint_level: 3 |
-| Level 4 / 放弃 | 权重小幅提升（×1.2）| hint_level: 4, result: "gave_up" |
+全部通过时，按提示级别区分权重变化（用了提示 ≠ 真正掌握）：
+
+| 提示级别 | 无薄弱点 | 有薄弱点 | 记录方式 |
+|---------|---------|---------|---------|
+| 无提示   | `pw * 0.6` | `pw * 0.8` | 无 hint 记录 |
+| Level 1 | `pw * 0.8` | `pw * 0.9` | hint_level: 1 |
+| Level 2 | 维持不变 | 维持不变 | hint_level: 2 |
+| Level 3 | 维持不变 | 维持不变 | hint_level: 3 |
+| Level 4 / 放弃 | `pw * 1.2` | `pw * 1.2` | hint_level: 4, result: "gave_up" |
+
+未全部通过时（任何提示级别）：`min(5.0, pw * 1.5 + 0.5 * weakness_count)`
+
+### 提示过程薄弱点
+
+每次给出提示时，根据用户求助内容判断薄弱点，写入 `.current_meta.json` 的 `hint_weaknesses` 字段。
+Review 时将 `hint_weaknesses` 与代码分析薄弱点合并去重，作为最终 `weak` 列表。
+即使最终代码全部通过，只要 `hint_weaknesses` 有内容，也算"有薄弱点"。
 
 ### soul.md 更新
 
