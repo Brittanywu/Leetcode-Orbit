@@ -1,5 +1,11 @@
 用户完成了代码，请执行 Code Review。严格按照以下步骤执行：
 
+## 第零步：确认用户已保存文件
+
+先提醒用户：**"开始 review 前，请确认你已经 Ctrl+S 保存了 workspace/current_problem.py，保存了吗？"**
+
+等用户确认后再继续。如果用户直接说"review"且上下文中没有确认过保存，也要先问一句。
+
 ## 第一步：加载必要文件
 
 1. 读取 `workspace/.current_meta.json` — 获取当前题目 ID、模式、开始时间
